@@ -1,0 +1,17 @@
+/*
+Criar uma regra CSS para formatação de parágrafo com as seguintesconfigurações: Largura do parágrafo: 150px; Altura do parágrafo: 100px; Cor da fonte branca Tipo de fonte Arial Cor de fundo verde Borda Superior: Espessura de 2px, na cor azul e estilo dashed. Borda Esquerda: Espessura de 2px, na cor amarela e estilo dotted. Borda Inferior: Espessura de 2px, na cor vermelha e estilo double. Borda Direita: Sem borda Espaçamento Superior e Esquerda: 10pxAo final adicione um texto ao parágrafo e verifique se o resultado apresentado está deacordo com a formatação sugerida.
+*/
+
+p{
+    width: 150px;
+    height: 100px;
+    overflow: scroll;
+    color: white;
+    background-color: green;
+    font-family: Arial;
+    border-top: 2px dashed blue;
+    border-bottom: 2px double red;
+    border-left: 2px dotted yellow;
+    padding: 10px 0 0 10px;
+}
+

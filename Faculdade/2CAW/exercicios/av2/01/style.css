@@ -1,0 +1,11 @@
+/*
+Criar uma regra CSS para formatação de parágrafo abaixo com as seguintes configurações: Cor da fonte Amarela Espessura da fonte: 900 Estilo Itálico Tipo de fonte Arial Cor de fundo verde *
+*/
+
+p{
+    color: yellow;
+    font-size: 900px;
+    font-style: italic;
+    font-family: Arial;
+    background-color: green;
+}

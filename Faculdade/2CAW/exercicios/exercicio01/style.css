@@ -1,0 +1,13 @@
+/*
+ESTUDANTE: Jenifer Angelo Medeiros
+TURMA: 2CAW NOITE
+*/
+
+
+/*Usando o seletor "#" para chamar o objeto por sua ID (externo)*/
+#externo {
+    /*Mudando a cor da fonte: */
+    color: antiquewhite;
+    /*Mudando a cor do fundo:*/
+    background-color: black;
+}

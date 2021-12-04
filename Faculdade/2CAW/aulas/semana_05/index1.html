@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Aula pós pausa</title>
+</head>
+<body>
+    <nav><a href="../index.html">Página Inicial</a></nav>
+    <article>
+        <h4>Formulários</h4>
+        <ul>
+            <li><p>Atributos "action" e "method" do form: <br>
+                action - define o local (uma URL) em que os dados recolhidos do formulário devem ser enviados<br>
+                method - define qual o método HTTP para enviar os dados (ele pode ser GET ou POST)
+            </p></li>
+            <li><p>
+                <\label> é vinculado a um campo do formulário, faz referência ao id do campo correspondente. Permite que o usuário clique no rótulo para ativar o campo correspondente.
+            </p></li>
+            <li><p>
+                <\input> entrada de texto de linha única. Seu atributo mais importante é o "type", o qual define a forma como o elemento input se comporta.<br>Pode ser "text", "email", "password"<br>Para definir o valor padrão de um elemento input, você tem que usar o atributo value.
+            </p></li>
+            <li><p>
+                <\textarea> input porém maior e é necessário tag de fechamento
+            </p></li>
+            <li><p>
+                <\button> o botão pode ser de três tipos: submit, reset ou button. <br> submit envia os dados do formulário para a página de web definida pelo atributo action do elemento form <br> reser redefine imediatamente todos os campos do formulário para o seu valor padrão <br> 
+            </p></li>
+        </ul>
+    </article>
+    <form action="" method="post" action="mailto:bruxespacial@gmail.com">
+        <div>
+            <label for="username">Usuário: </label>
+            <input type="text" name="username">
+        </div>
+        <div>
+            <label for="password">Senha: </label>
+            <input type="password" name="password">
+        </div>
+        <div>
+           <button type="submit" value="send">Login</button> 
+        </div>
+    </form>
+</body>
+</html>

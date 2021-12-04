@@ -1,0 +1,10 @@
+/*estudante: Jenifer Angelo Medeiros*/
+/*Usando o seletor de ID "exemplo_01" */
+#exemplo_01{
+    /*definindo borda sólida de 2px cor padrão*/
+    border: solid 2px;
+    /*definindo padding (espaço interno) de 2px*/
+    padding: 2px;
+    /*definindo o alinhamento do texto como centro*/
+    text-align: center;
+}

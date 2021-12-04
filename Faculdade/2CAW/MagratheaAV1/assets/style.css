@@ -1,0 +1,135 @@
+html {
+    background-color: #0f1319;
+    color: oldlace;
+    word-wrap: break-word;
+    font-family: 'Gentium Basic', serif;
+  }
+  
+  body {
+    height: 100vh;
+  }
+  
+  a {
+    color: #c5a1e9;
+    text-decoration: none;
+    list-style: none;
+  }
+
+  h3, h4, h5, h6{
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(0, 255, 238);
+    text-align: center;
+  }
+
+  h1, h2{
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(0, 255, 238);
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  img {
+      width: 200px;
+      margin: 10px;
+  }
+  
+  .login {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+  }
+  
+  #formContent {
+    border-radius: 10px 10px 10px 10px;
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    padding: 0px;
+    text-align: center;
+  }
+
+  form div input {
+      padding: 5px;
+      margin: 5px;
+      border-radius: 10px;
+  }
+
+  
+
+  .buttom {
+      background-color: turquoise;
+      text-transform: uppercase;
+      border-radius: 10px;
+      margin: auto;
+      margin-top: 10px;
+      width: 150px;
+  }
+
+  .buttom a{
+      color: rgb(26,26,26);
+  }
+
+  header {
+      width: 100%;
+      
+  }
+
+  header h1{
+      float: right;
+  }
+
+  header img{
+      width: 50px;
+  }
+
+  header nav ul{
+      display: inline-flex;
+      height: fit-content;
+      justify-content: center;
+    align-items: center;
+  }
+
+  header nav ul li{
+      margin: 10px;
+      padding: 5px 7px;
+  }
+
+  section{
+      display: inline-block;
+  }
+
+  .main{
+      float: left;
+      background-color: rgb(98, 98, 98);
+      border-radius: 10px;
+      padding: 10px;
+      margin: 20px 5px;
+      width: 55%;
+  }
+
+  .aside{
+      float: right;
+      background-color: rgb(98, 98, 98);
+      margin: 20px 5px;
+      padding: 10px;
+      border-radius: 10px;
+      width: 40%;
+  }
+
+  .sobre{
+    background-color: rgb(98, 98, 98);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+  }
+
+  footer{
+    background-color: rgb(98, 98, 98);
+    border: 1px solid white;
+    padding: 10px;
+    margin: 20px 50px;
+  }

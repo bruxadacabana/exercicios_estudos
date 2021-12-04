@@ -1,0 +1,10 @@
+# SAÍDA DE DADOS
+coisa = input('Digite qualquer coisa: ')
+print('O tipo é: ', type(coisa))
+print('É alfabético? ', coisa.isalpha())
+print('É alfanumérico?', coisa.isalnum())
+print('É numérico? ', coisa.isnumeric())
+print('Só tem espaço? ', coisa.isspace())
+print('Está em letras maiuscúlas? ', coisa.isupper())
+print('Está em letras minúsculas? ', coisa.islower())
+print('Está capitalizada?', coisa.istitle())
