@@ -40,5 +40,6 @@
             <th><?php echo $idade ?></th>
         </tr>
     </table>
+    <a href="EX001.php">Próximo Exercício</a>
 </body>
 </html>
