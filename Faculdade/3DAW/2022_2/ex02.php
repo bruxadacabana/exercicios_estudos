@@ -16,7 +16,7 @@
     <title>Exercício!</title>
 </head>
 <body>
-    <form action="EX001.php" method="post">
+    <form action="ex02.php" method="post">
         <label for="nome">Nome:</label>
         <input type="text" name="nome" id="nome">
         <button type="submit">Enviar</button>
