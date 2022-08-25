@@ -1,0 +1,27 @@
+*{
+    background-color: black;
+    color:antiquewhite;
+    text-align: center;
+    margin: 0%;
+}
+img{
+    
+}
+h3{
+    text-decoration: underline;
+}
+h1, h3{
+    color: rgb(206, 31, 255);
+}
+section{
+    border: 1px white solid;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 7px;
+}
+.fortytwo, footer{
+    color: gold;
+    font-size: 90%;
+    margin: 10px;
+    font-family: monospace;
+}

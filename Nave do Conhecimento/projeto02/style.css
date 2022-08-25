@@ -1,0 +1,106 @@
+* {
+    background-color: black;
+    color:antiquewhite;
+    margin:0%;
+    font-family: 'Roboto', sans-serif;
+}
+h1{
+    font-family: 'Alumni Sans Collegiate One', sans-serif;
+    color: rgba(20, 226, 226, 0.493);
+    font-size: 50px;
+    font-weight: 50;
+    line-height: 49px;
+    display: inline;
+}
+
+nav{
+    display: flex;
+}
+
+nav ul li{
+    display: inline;
+    margin: 10px;
+}
+
+header{
+    display: inline;
+}
+
+.destaque{
+    padding: 15px;
+    margin: 15px;
+    border: 4px outset rgb(109, 128, 128);
+    text-align: justify;
+}
+h2{
+    background-color: rgba(34, 132, 132, 0.493);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.botoesDestaque{
+    display: flex;
+}
+
+.botao{
+    background-color: rgba(240, 248, 255, 0.211);
+    text-align: center;
+    width: fit-content;
+    padding: 7px;
+    border-radius: 5px;
+    margin: 20px 20px;
+    box-shadow: 1px 1px 10px rgba(20, 226, 226, 0.493);
+}
+
+.cursos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+img{
+    width: 160px;
+    margin: 10px;
+}
+
+form{
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+fieldset{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 5px;
+}
+.form{
+    margin: 15px 7px;
+}
+
+button{
+    padding: 5px 20px;
+    background-color: rgb(23, 113, 83);
+    color: rgb(0, 0, 0);
+}
+
+footer{
+    margin-top: 20px;
+    font-family: 'Silkscreen', cursive;
+    color: gold;
+    text-align: center;
+    font-size: smaller;
+}
+.twocol{
+    display: flex;
+}
