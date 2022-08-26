@@ -54,11 +54,23 @@ h2{
     box-shadow: 1px 1px 10px rgba(20, 226, 226, 0.493);
 }
 
-.cursos{
+.botao:hover{
+    box-shadow: 2px 1px 10px rgba(255, 255, 255, 0.828);
+}
+
+.cexemplos{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+.cdestaque:hover{
+    zoom: 110%;
+}
+
+.cursos:hover{
+    zoom: 110%;
 }
 
 section{
@@ -73,10 +85,6 @@ section{
     margin-left: 5px;
     margin-right: 5px;
   }
-
-figure{
-    
-}
 
 .card figure, figcaption{
     color: black;
@@ -151,3 +159,10 @@ footer{
     flex: 1;
     justify-content: center;
   }
+.agenda ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.agenda ul li{
+    margin: 15px;
+}
