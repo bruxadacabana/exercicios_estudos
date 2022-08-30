@@ -24,9 +24,21 @@
         </nav>
     </header>
     <main>
-        <form action="index.html">
+        <form class="formulario" action="index.html">
             <fieldset>
-                <h3>Faça o seu cadastro para continuar</h3>
+                <h3>
+                    Cadastre-se para continuar
+                </h3>
+                <div class="form">
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome">
+                    <label for="sobrenome">Sobrenome:</label>
+                    <input type="text" name="sobrenome" id="sobrenome">
+                </div>
+                <div class="form">
+                    <label for="dnasc">Data de nascimento:</label>
+                    <input type="date" name="dnasc" id="dnasc">
+                </div>
                 <div class="form">
                     <label for="email">E-mail:</label>
                     <input type="email" name="email" id="email">
@@ -40,6 +52,9 @@
                 <br>
                 <a href="recuperacao.html" style="font-size: smaller;">Esqueci a minha senha</a>
             </fieldset>
+            <a href="login.html">
+                <p class="botao">Ou clique aqui para fazer seu login</p>
+            </a>
         </form>
     </main>
     <footer>
