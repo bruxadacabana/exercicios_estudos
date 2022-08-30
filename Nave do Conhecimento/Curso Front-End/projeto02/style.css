@@ -1,13 +1,26 @@
+:root{
+    --escuro: rgb(22, 21, 32);
+    --detalhe: #f0f8ff36;
+    --highlight: #2284847e;
+    --logotipo:  #14e2e27e;
+    --shadow: #14e2e27e;
+    --botao: #177153;
+    --light: #2ee0e0;
+    --light-shadow:#ffffffa1;
+    --cor-texto-principal: #faebd7;
+    --fortyfour: #ffd700;
+}
+
 * {
-    background-color: rgb(22, 21, 32);
-    color:antiquewhite;
+    background-color: var(--escuro);
+    color: var(--cor-texto-principal);
     margin:0%;
     font-family: 'Roboto', sans-serif;
 }
 
 h1{
     font-family: 'Alumni Sans Collegiate One', sans-serif;
-    color: rgba(20, 226, 226, 0.493);
+    color: var(--logotipo);
     font-size: 50px;
     font-weight: 50;
     line-height: 49px;
@@ -30,11 +43,12 @@ header{
 .destaque{
     padding: 15px;
     margin: 15px;
-    border: 4px outset rgb(109, 128, 128);
+    border: 4px outset var(--light-shadow);
     text-align: justify;
 }
+
 h2{
-    background-color: rgba(34, 132, 132, 0.493);
+    background-color: var(--highlight);
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 15px;
@@ -45,44 +59,72 @@ h2{
 }
 
 .botao{
-    background-color: rgba(240, 248, 255, 0.211);
+    background-color: var(--detalhe);
     text-align: center;
     width: fit-content;
     padding: 7px;
     border-radius: 5px;
     margin: 20px 20px;
-    box-shadow: 1px 1px 10px rgba(20, 226, 226, 0.493);
+    box-shadow: 1px 1px 15px var(--shadow);
 }
 
-.cursos{
+.botao:hover{
+    box-shadow: 2px 1px 20px var(--light-shadow);
+}
+
+.cexemplos{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.cexemplos img{
+    max-width: 150px;
+}
+
+.cdestaque:hover{
+    zoom: 110%;
+}
+
+.cursos:hover{
+    zoom: 110%;
 }
 
 section{
     margin: 10px;
 }
 
-.card {
-    display: inline;
+.card{
     margin-top: 5px;
-    justify-content: center;
     margin-bottom: 10px;
     margin-left: 5px;
     margin-right: 5px;
-  }
-
-figure{
-    
+    width: 35%;
+    border-radius: 10px;
+    background-color: var(--light-shadow);
+    height: 35%;
 }
 
-.card figure, figcaption{
-    color: black;
-    background-color: whitesmoke;
+.card, figure, figcaption{
+    color: var(--escuro);
+    background-color:var(--light-shadow);
+}
+
+
+.botaodark{
+    background-color: var(--light-shadow);
+    text-align: center;
+    width: fit-content;
+    margin-top: 10px;
+    padding: 7px;
     border-radius: 5px;
-    padding: 5px;
+    box-shadow: 1px 1px 15px var(--shadow);
+}
+
+.botaodark:hover{
+    box-shadow: 2px 1px 20px var(--light-shadow);
 }
 
 .mcursos{
@@ -98,8 +140,7 @@ li{
 }
 
 img{
-    width: 160px;
-    margin: 10px;
+    width: 95%;
 }
 
 form{
@@ -108,28 +149,31 @@ form{
     margin-top: 20px;
     text-align: center;
 }
+
 fieldset{
     display: flex;
     flex-direction: column;
     margin: 15px 5px;
 }
+
 .form{
     margin: 15px 7px;
 }
 
 button{
     padding: 5px 20px;
-    background-color: rgb(23, 113, 83);
-    color: rgb(0, 0, 0);
+    background-color: var(--botao);
+    color: var(--escuro);
 }
 
 footer{
     margin-top: 20px;
     font-family: 'Silkscreen', cursive;
-    color: gold;
+    color: var(--fortyfour);
     text-align: center;
     font-size: smaller;
 }
+
 .twocol{
     display: flex;
 }
@@ -139,15 +183,38 @@ footer{
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    border: 5px outset aqua;
+    border: 5px outset var(--light);
     margin: 10px 25px;
     padding: 10px;
-  }
+}
   
-  .column {
+.column {
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
     flex: 1;
-    justify-content: center;
   }
+.agenda ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.agenda ul li{
+    margin: 15px;
+}
+
+@media screen and (max-width: 600px) {
+    .twocol{
+        display: block;
+    }
+
+    .row{
+        display: block;
+    }
+    .card{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    
+}
