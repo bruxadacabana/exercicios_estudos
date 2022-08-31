@@ -47,7 +47,7 @@ header{
     padding: 15px;
     margin: 15px;
     border: 4px outset var(--light-shadow);
-    text-align: justify;
+    text-align: center;
 }
 
 h2{
@@ -211,7 +211,25 @@ footer{
     flex-wrap: wrap;
 }
 .agenda ul li{
-    margin: 15px;
+    width: 29%;
+    margin: 10px;
+}
+
+.agenda p{
+    text-align: justify;
+}
+
+.evdestaque{
+    width: 20%;
+}
+
+.agenda{
+    width: 70%;
+}
+
+.eventos{
+    display: flex;
+    align-items: flex-start;
 }
 
 @media screen and (max-width: 600px) {
