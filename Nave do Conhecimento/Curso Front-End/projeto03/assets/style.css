@@ -1,6 +1,8 @@
 :root{
     --principal: #94bf73;
+    --escuro:#526a40;
     --fundodois: #d9d0b4ab;
+    --fundodoisb: #e3ddca;
 }
 
 *{
@@ -8,6 +10,18 @@
     margin: 0%;
     text-decoration: none;
     list-style: none;
+    color: black;
+}
+
+nav{
+    background-color: var(--fundodoisb);
+    border: 2px solid #94bf73;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+nav, .barrrasup, .barrainf{
+    display: flex;
 }
 
 .menu{
@@ -19,15 +33,22 @@
     width: 30%;
 }
 
-nav, .barrrasup, .barrainf{
-    display: flex;
+.pesquisar{
+    width: fit-content;
+    padding: 5px;
 }
 
-.pesquisar{
-    float: right;
+.barrainf{
+    align-items: center;
 }
 
 .barrainf li{
+    border: 3px outset var(--escuro);
+    height: 40px;
+    padding: 2px;
+}
+
+li{
     margin: 5px;
     text-align: center;
 }
@@ -40,9 +61,12 @@ main{
     margin: 15px;
     padding: 10px;
     background-color: var(--fundodois);
-    display: flex;
 }
 
 section{
     margin: 10px;
+}
+
+.ind_linha{
+    display: flex;
 }
