@@ -70,3 +70,16 @@ section{
 .ind_linha{
     display: flex;
 }
+
+fieldset{
+    display: inline-block;
+    width: 90%;
+    margin: auto;
+}
+
+.itemform, button{
+    margin-top: 9px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
