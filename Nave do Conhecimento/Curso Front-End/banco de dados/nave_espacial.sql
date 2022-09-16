@@ -11,7 +11,5 @@ CREATE TABLE espacos (
     turmasEspaco int(16)
 );
 CREATE TABLE turma (
-	nome varchar(100),
-    cpf varchar(11),
-    idUsuario int(15)
+	
 );
