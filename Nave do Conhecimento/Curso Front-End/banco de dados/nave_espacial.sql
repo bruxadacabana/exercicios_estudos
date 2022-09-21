@@ -1,35 +1,51 @@
 CREATE DATABASE nave_espacial;
+
 CREATE TABLE dependentes(
     nome varchar(100),
-    usuarioid int
+    usuarioid int NOT NULL AUTO_INCREMENT,
+    idusuario int,
+    PRIMARY KEY (usuarioid),
+    FOREIGN KEY (idusuario) REFERENCES usuarios(idusuario)
 );
 CREATE TABLE usuarios(
     nome varchar(100),
     cpf varchar(11),
-    idusuario int
+    idusuario int NOT NULL AUTO_INCREMENT,
+    PRIMARY KEY (idusuario)
 );
 CREATE TABLE espacos(
-    idespaco int,
+    idespaco int NOT NULL AUTO_INCREMENT,
     nomeespaco varchar(50),
     usuariosespaco int,
-    turmasespaco int
+    turmasespaco int,
+    PRIMARY KEY (idespaco)
 );
 CREATE TABLE turma(
-    idturma int,
+    idturma int NOT NULL AUTO_INCREMENT,
     nometurma varchar(100),
     datainicio DATETIME,
     datafim DATETIME,
-    idcurso int
+    idcurso int NOT NULL,
+    PRIMARY KEY (idturma),
+    FOREIGN KEY (idcurso) REFERENCES curso(idcurso)   
 );
 CREATE TABLE curso(
-    idcurso int,
+    idcurso int NOT NULL AUTO_INCREMENT,
     materia varchar(50),
-    ementa text
+    ementa text,
+    PRIMARY KEY (idcurso)
 );
 CREATE TABLE alunocurso(
     idusuario int,
-    idturma int
+    idturma int,
+    FOREIGN KEY (idusuario) REFERENCES usuarios(idusuario),
+    FOREIGN KEY (idturma) REFERENCES turma(idturma)
 );
+
+/*
+acrescentando auto incremento nas tabelas já feitas:
+ALTER TABLE Persons AUTO_INCREMENT=1;
+*/
 
 INSERT INTO usuarios (nome, cpf)
 VALUES ('Kaio', 11111111111);
@@ -54,7 +70,7 @@ INSERT INTO dependentes (nome)
 VALUES ('Mirelle');
 
 INSERT INTO curso (materia, ementa)
-VALUES ('Python', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis pulvinar orci, at consequat justo consectetur sed. Proin varius mollis fermentum. Cras risus lacus, commodo a viverra quis, sodales et nisl. Quisque ligula libero, varius id molestie ut, pulvinar sed eros. Maecenas cursus, erat sed rhoncus efficitur, sapien metus facilisis turpis, ac pellentesque nunc nulla gravida ipsum. Etiam dignissim ultricies felis, non efficitur eros mollis sit amet. Aenean gravida, turpis non rutrum sodales, felis diam feugiat orci, et mollis tortor tortor sagittis diam.');
+VALUES ('Python', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis pulvinar orci, at consequat justo consectetur sed.');
 INSERT INTO curso (materia, ementa)
 VALUES ('Javascript', 'Morbi venenatis pulvinar orci, at consequat justo consectetur sed. Proin varius mollis fermentum. Cras risus lacus.');
 INSERT INTO curso (materia, ementa)
