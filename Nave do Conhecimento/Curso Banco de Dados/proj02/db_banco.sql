@@ -24,7 +24,6 @@ CREATE TABLE `conta` (
 CREATE TABLE `cliente` (
   `id_cliente` int(15) DEFAULT NULL AUTO_INCREMENT,
   `id_pessoa` int(15) DEFAULT NULL,
-  `conta` int(15) DEFAULT NULL,
   `agencia` int(6) DEFAULT NULL,
   FOREIGN KEY (id_pessoa) REFERENCES pessoas(id_pessoa),
   PRIMARY KEY (id_cliente)
