@@ -13,6 +13,7 @@ INSERT INTO `pessoas`(`primeiro_nome`, `sobrenome`, `data_nascimento`, `endereç
 /* R E A D */
 SELECT * FROM `pessoas` WHERE id_pessoa=1; 
 SELECT MIN(id_pessoa), primeiro_nome FROM `pessoas`;
+SELECT MAX(id_pessoa), primeiro_nome FROM `pessoas`;
 SELECT * FROM `pessoas` ORDER BY primeiro_nome;
 
 
