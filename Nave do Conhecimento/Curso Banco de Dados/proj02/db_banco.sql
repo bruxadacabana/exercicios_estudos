@@ -1,5 +1,7 @@
+/*CREATE DATABASE banco_espacial;*/
+
 CREATE TABLE `pessoas` (
-  `id_pessoa` int(15) DEFAULT NULL AUTO_INCREMENT,
+  `id_pessoa` int(15) UNIQUE AUTO_INCREMENT,
   `primeiro_nome` varchar(25) DEFAULT NULL,
   `sobrenome` varchar(100) DEFAULT NULL,
   `data_nascimento` date DEFAULT NULL,
@@ -12,7 +14,7 @@ CREATE TABLE `pessoas` (
 );
 
 CREATE TABLE `conta` (
-  `id_conta` int(15) DEFAULT NULL AUTO_INCREMENT,
+  `id_conta` int(15) UNIQUE AUTO_INCREMENT,
   `saldo` int(15) DEFAULT NULL,
   `extrato` varchar(255) DEFAULT NULL,
   `tipo_conta` varchar(15) DEFAULT NULL,
@@ -22,7 +24,7 @@ CREATE TABLE `conta` (
 );
 
 CREATE TABLE `cliente` (
-  `id_cliente` int(15) DEFAULT NULL AUTO_INCREMENT,
+  `id_cliente` int(15) UNIQUE AUTO_INCREMENT,
   `id_pessoa` int(15) DEFAULT NULL,
   `agencia` int(6) DEFAULT NULL,
   FOREIGN KEY (id_pessoa) REFERENCES pessoas(id_pessoa),
@@ -38,7 +40,7 @@ CREATE TABLE `cliente_conta` (
 ); 
 
 CREATE TABLE `funcionarios` (
-  `id_funcionario` int(15) DEFAULT NULL,
+  `id_funcionario` int(15) UNIQUE,
   `id_pessoa` int(15) DEFAULT NULL,
   `cargo` varchar(75) DEFAULT NULL,
   PRIMARY KEY (id_funcionario),
@@ -46,7 +48,7 @@ CREATE TABLE `funcionarios` (
 );
 
 CREATE TABLE `gerente` (
-  `id_gerente` int(15) DEFAULT NULL,
+  `id_gerente` int(15) UNIQUE,
   `id_pessoa` int(15) DEFAULT NULL,
   `clientes` varchar(255) DEFAULT NULL,
   `conta` int(15) DEFAULT NULL,
