@@ -23,7 +23,7 @@ SELECT * FROM `pessoas` ORDER BY primeiro_nome;
 
 SELECT id_pessoa, primeiro_nome FROM pessoas /*WHERE condition*/ GROUP BY primeiro_nome ORDER BY primeiro_nome;
 
-SELECT id_pessoa, primeiro_nome, data_nascimento FROM pessoas /*WHERE condition*/ GROUP BY data_nascimento ORDER BY COUNT(id_pessoa);
+SELECT COUNT(id_pessoa), primeiro_nome, data_nascimento FROM pessoas /*WHERE condition*/ GROUP BY data_nascimento /*ORDER BY COUNT(id_pessoa)*/;
 
 
 
