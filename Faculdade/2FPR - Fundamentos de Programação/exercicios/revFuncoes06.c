@@ -25,7 +25,7 @@ void main (){
     printf("\nvalor total: %d \n", (C-1));
     scanf("%d", &linha);
 
-    resultado = funcao(matriz, num, linha);
+    resultado = funcao(matriz, linha, num);
 
     if (resultado == 1){
         printf("\nO numero esta nessa linha");

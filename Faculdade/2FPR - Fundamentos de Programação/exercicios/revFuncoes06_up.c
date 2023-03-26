@@ -21,11 +21,10 @@ void main (){
 
     printf("\n\nDigite qual numero voce deseja buscar: ");
     scanf("%d", &num);
-    printf("Digite o numero da linha onde deseja realizar a busca: ");
-    printf("\nvalor total: %d \n", (C-1));
+    printf("Digite o numero da linha onde deseja realizar a busca (valor total: %d) \n: ",  (L-1));
     scanf("%d", &linha);
 
-    resultado = funcao(matriz, num, linha);
+    resultado = funcao(matriz, linha, num);
 
     if (resultado == 0){
         printf("\nO numero nao esta nessa linha");
@@ -35,13 +34,13 @@ void main (){
 }
 
 int funcao (int m[L][C], int linha, int num){
-    int i;
-    for (i=0; i<=C; i++){
+    int i, j;
+    for (i=0, j=0; i<C; i++){
         if (m[linha][i] == num){
-            return 1;
+            j++;
         }
     }
-    return 0;
+    return j;
 }
 
 void exibir (int m[L][C]){
