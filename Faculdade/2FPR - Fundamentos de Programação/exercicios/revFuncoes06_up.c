@@ -27,10 +27,10 @@ void main (){
 
     resultado = funcao(matriz, num, linha);
 
-    if (resultado == 1){
-        printf("\nO numero esta nessa linha");
-    } else{
+    if (resultado == 0){
         printf("\nO numero nao esta nessa linha");
+    } else{
+        printf("\nO numero aparece %d vezes nessa linha", resultado);
     }
 }
 
