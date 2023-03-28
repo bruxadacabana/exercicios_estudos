@@ -16,6 +16,7 @@ considere uma matriz m[12][10] (doze meses/10 funcionários) que armazena o tota
 
 void exibir (int m[MESES][FUNCS]);
 void gerar (int m[MESES][FUNCS]);
+int calculo (int m[MESES][FUNCS]);
 
 void main (){
     int vendas[MESES][FUNCS], op = 0;
