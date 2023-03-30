@@ -16,10 +16,13 @@ considere uma matriz m[12][10] (doze meses/10 funcionários) que armazena o tota
 
 void exibir (int m[MESES][FUNCS]);
 void gerar (int m[MESES][FUNCS]);
-int calculo (int m[MESES][FUNCS]);
+int totalAno (int m[MESES][FUNCS]);
+int totalMes (int m[MESES][FUNCS], int mes);
+int funcANo (int m[MESES][FUNCS], int func);
+int mesMaV (int m[MESES][FUNCS]);
 
 void main (){
-    int vendas[MESES][FUNCS], op = 0;
+    int vendas[MESES][FUNCS], op = 0, sel = 0;
 
     gerar(vendas);
     exibir(vendas);
@@ -38,13 +41,17 @@ void main (){
         switch (op)
         {
         case 1:
-            
+            printf("\n\nO total vendido nesse ano foi R$ %d!", totalAno(vendas);
             break;
         case 2:
-            
+            printf("\n\nDigite (numero do) mês você gostaria de obter o total: ");
+            scanf("%d", &sel);
+            printf("\nO total de vendas desse mês foi %d!", totalMes(vendas, (sel-1)));
             break;
         case 3:
-            
+            printf("\n\nDigite o ID do funcionario do qual deseja saber o valor: ");
+            scanf("%d", &sel);
+            printf("\nO total de vendas desse mês foi %d!", totalMes(vendas, sel));
             break;
         case 4:
             
@@ -89,7 +96,38 @@ void gerar (int m[MESES][FUNCS]){
 	{
 		for (j=0; j<FUNCS; j++)
 		{
-			m[i][j] = 1 + rand()%100;
+			m[i][j] = 1 + rand()%1000;
 		}
 	}
+}
+
+int totalAno (int m[MESES][FUNCS]){
+    int i, j, soma=0;
+
+    for (i=0; i<MESES; i++){
+        for (j=0; j<FUNCS; j++){
+            soma = soma + m[i][j];
+        }
+    }
+    return soma;
+}
+
+int totalMes (int m[MESES][FUNCS], int mes){
+    int i, soma = 0;
+    for (i=0; i<FUNCS; i++){
+        soma = soma + m[mes][i];
+    }
+    return soma;
+}
+
+int funcANo (int m[MESES][FUNCS], int func){
+    int i, soma = 0;
+    for (i=0; i<MESES; i++){
+        soma = soma + m[i][func];
+    }
+    return soma;
+}
+
+int mesMaV (int m[MESES][FUNCS]){
+    //Determinar o mês com maior índice de vendas
 }
