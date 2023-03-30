@@ -102,6 +102,7 @@ void gerar (int m[MESES][FUNCS]){
 }
 
 int totalAno (int m[MESES][FUNCS]){
+    // Calcular o total vendido durante o ano;
     int i, j, soma=0;
 
     for (i=0; i<MESES; i++){
@@ -113,6 +114,7 @@ int totalAno (int m[MESES][FUNCS]){
 }
 
 int totalMes (int m[MESES][FUNCS], int mes){
+    // Dado um mês fornecido pelo usuário, determinar o total vendido nesse mês;
     int i, soma = 0;
     for (i=0; i<FUNCS; i++){
         soma = soma + m[mes][i];
@@ -121,6 +123,7 @@ int totalMes (int m[MESES][FUNCS], int mes){
 }
 
 int funcANo (int m[MESES][FUNCS], int func){
+    // Dado um funcionário fornecido pelo usuário, determinar o total vendido por ele durante o ano;
     int i, soma = 0;
     for (i=0; i<MESES; i++){
         soma = soma + m[i][func];
@@ -129,5 +132,9 @@ int funcANo (int m[MESES][FUNCS], int func){
 }
 
 int mesMaV (int m[MESES][FUNCS]){
-    //Determinar o mês com maior índice de vendas
+    // Determinar o mês com maior índice de vendas
+}
+
+int outraFUnc (){
+    // Determinar o funcionário que menos vendeu durante o ano
 }
