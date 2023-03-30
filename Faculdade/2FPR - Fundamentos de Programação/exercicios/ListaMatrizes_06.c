@@ -133,12 +133,17 @@ int funcANo (int m[MESES][FUNCS], int func){
 
 int mesMaV (int m[MESES][FUNCS]){
     // Determinar o mês com maior índice de vendas
-    int i, j, comp = 0, mes = 0;
-    for (i=0; i<FUNCS; i++){
-        for (j=0; j<MESES; j++){
-            
-        } 
+    int i, j, comp = 0, mes = 0, id;
+    for (j=0; j<MESES; j++){
+        for (i=0; i<FUNCS; i++){
+            comp = comp + m[j][i];
+        }
+        if (comp > mes){
+            mes = comp;
+            id = j;
+        }
     }
+    return id;
 }
 
 int outraFUnc (){
