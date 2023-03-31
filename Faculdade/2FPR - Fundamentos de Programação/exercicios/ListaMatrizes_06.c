@@ -133,32 +133,32 @@ int funcANo (int m[MESES][FUNCS], int func){
 
 int mesMaV (int m[MESES][FUNCS]){
     // Determinar o mês com maior índice de vendas
-    int i, j, comp = 0, mes = 0, id;
-    for (j=0; j<MESES; j++){
+    int i, j, comp, mes = 0, id;
+    for (j=0, comp = 0; j<MESES; j++){
         for (i=0; i<FUNCS; i++){
             comp = comp + m[j][i];
         }
+        // após somar o total de vendas de cada funcionário, compara com o total de vendas do mês anterior
         if (comp > mes){
             mes = comp;
             id = j;
         }
-        comp = 0;
     }
     return id;
 }
 
 int funcMeV (int m[MESES][FUNCS]){
     // Determinar o funcionário que menos vendeu durante o ano
-    int i, j, comp = 0, mes = 0, id;
-    for (i=0; i<FUNCS; i++){
+    int i, j, comp, mes = 0, id;
+    for (i=0, comp = 0; i<FUNCS; i++){
         for (j=0; j<MESES; j++){
             comp = comp + m[j][i];
         }
+        // após somar o total de vendas de cada funcionário, compara com o total de vendas do mês anterior. Se for menor, atualiza o valor de mes e o id.
         if (comp < mes){
             mes = comp;
             id = i;
         }
-        comp = 0;
     }
     return id;
 }
