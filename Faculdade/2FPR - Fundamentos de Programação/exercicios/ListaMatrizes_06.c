@@ -30,46 +30,45 @@ void main (){
 
     
     while (op != 6){
-        printf("O que você deseja fazer?\n");
+        printf("\n\n--------------------------------------------");
+        printf("\nO que voce deseja fazer?\n\n");
         printf("1 - Total vendido no ano\n");
-        printf("2 - Total vendido num mês\n");
-        printf("3 - Total vendido por um funcionário num ano\n");
-        printf("4 - Ver mês com maior venda\n");
-        printf("5 - Ver funcionário com menor venda no ano\n");
+        printf("2 - Total vendido num mes\n");
+        printf("3 - Total vendido por um funcionario num ano\n");
+        printf("4 - Ver mes com maior venda\n");
+        printf("5 - Ver funcionario com menor venda no ano\n");
         printf("6 - Sair\n");
         scanf("%d", &op);
 
         switch (op)
         {
         case 1:
-            printf("\n\nO total vendido nesse ano foi R$ %d!", totalAno(vendas));
+            printf("\n\nO total vendido nesse ano foi R$%d.000.000,00!", totalAno(vendas));
             break;
         case 2:
-            printf("\n\nDigite (numero do) mês você gostaria de obter o total: ");
+            printf("\n\nDigite (numero do) mes voce gostaria de obter o total: ");
             scanf("%d", &sel);
-            printf("\nO total de vendas desse mês foi %d!", totalMes(vendas, (sel-1)));
+            printf("\nO total de vendas desse mes foi R$%d.000.000,00!", totalMes(vendas, (sel-1)));
             break;
         case 3:
             printf("\n\nDigite o ID do funcionario do qual deseja saber o valor: ");
             scanf("%d", &sel);
-            printf("\nO total de vendas desse mês foi %d!", totalMes(vendas, sel));
+            printf("\nO total de vendas desse mes foi R$%d.000.000,00!", totalMes(vendas, sel));
             break;
         case 4:
-            printf("\n\nO mês com maior venda foi o %d!", mesMaV(vendas) + 1);
+            printf("\n\nO mes com maior venda foi o %d!", mesMaV(vendas) + 1);
             break;
         case 5:
-            printf("\n\nO funcionário com menor venda foi o cujo ID e %d!", funcMeV(vendas));
+            printf("\n\nO funcionario com menor venda foi o cujo ID e %d!", funcMeV(vendas));
             break;
         case 6:
-            printf("Tudo bem, obrigada por usar nossos serviços!");
+            printf("\nTudo bem, obrigada por usar nossos servicos!");
             break;
         default:
             printf("Comando invalido");
             break;
         }
-
     }
-
 }
 
 
@@ -77,7 +76,7 @@ void main (){
 void exibir (int m[MESES][FUNCS]){
     int i, j;
 	
-	printf ("\n\nElementos da matriz:\n");
+	printf ("\n\nTabela de Vendas:\n");
 	for (i=0; i<MESES; i++)
 	{
 		for (j=0; j<FUNCS; j++)
@@ -97,7 +96,7 @@ void gerar (int m[MESES][FUNCS]){
 	{
 		for (j=0; j<FUNCS; j++)
 		{
-			m[i][j] = 1 + rand()%1000;
+			m[i][j] = 1 + rand()%100;
 		}
 	}
 }
