@@ -20,6 +20,7 @@ int totalAno (int m[MESES][FUNCS]);
 int totalMes (int m[MESES][FUNCS], int mes);
 int funcANo (int m[MESES][FUNCS], int func);
 int mesMaV (int m[MESES][FUNCS]);
+int funcMeV (int m[MESES][FUNCS]);
 
 void main (){
     int vendas[MESES][FUNCS], op = 0, sel = 0;
@@ -57,7 +58,7 @@ void main (){
             printf("\n\nO mês com maior venda foi o %d!", mesMaV(vendas) + 1);
             break;
         case 5:
-            
+            printf("\n\nO funcionário com menor venda foi o cujo ID e %d!", funcMeV(vendas));
             break;
         case 6:
             printf("Tudo bem, obrigada por usar nossos serviços!");
@@ -134,7 +135,7 @@ int funcANo (int m[MESES][FUNCS], int func){
 int mesMaV (int m[MESES][FUNCS]){
     // Determinar o mês com maior índice de vendas
     int i, j, comp, mes = 0, id;
-    for (j=0, comp = 0; j<MESES; j++){
+    for (j=0; j<MESES; j++, comp = 0){
         for (i=0; i<FUNCS; i++){
             comp = comp + m[j][i];
         }
@@ -150,7 +151,7 @@ int mesMaV (int m[MESES][FUNCS]){
 int funcMeV (int m[MESES][FUNCS]){
     // Determinar o funcionário que menos vendeu durante o ano
     int i, j, comp, mes = 0, id;
-    for (i=0, comp = 0; i<FUNCS; i++){
+    for (i=0; i<FUNCS; i++, comp = 0){
         for (j=0; j<MESES; j++){
             comp = comp + m[j][i];
         }
