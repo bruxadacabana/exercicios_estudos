@@ -41,7 +41,7 @@ void main (){
         switch (op)
         {
         case 1:
-            printf("\n\nO total vendido nesse ano foi R$ %d!", totalAno(vendas);
+            printf("\n\nO total vendido nesse ano foi R$ %d!", totalAno(vendas));
             break;
         case 2:
             printf("\n\nDigite (numero do) mês você gostaria de obter o total: ");
@@ -54,7 +54,7 @@ void main (){
             printf("\nO total de vendas desse mês foi %d!", totalMes(vendas, sel));
             break;
         case 4:
-            
+            printf("\n\nO mês com maior venda foi o %d!", mesMaV(vendas) + 1);
             break;
         case 5:
             
@@ -142,10 +142,23 @@ int mesMaV (int m[MESES][FUNCS]){
             mes = comp;
             id = j;
         }
+        comp = 0;
     }
     return id;
 }
 
-int outraFUnc (){
+int funcMeV (int m[MESES][FUNCS]){
     // Determinar o funcionário que menos vendeu durante o ano
+    int i, j, comp = 0, mes = 0, id;
+    for (i=0; i<FUNCS; i++){
+        for (j=0; j<MESES; j++){
+            comp = comp + m[j][i];
+        }
+        if (comp < mes){
+            mes = comp;
+            id = i;
+        }
+        comp = 0;
+    }
+    return id;
 }
