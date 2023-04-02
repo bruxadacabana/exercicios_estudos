@@ -5,7 +5,9 @@
 
 void main(){
 
-    int op, sel;
+    int op, sel, s[TAM];
+
+    printf("Digite uma string: ");
 
     while (op != 6)
     {
@@ -18,6 +20,31 @@ void main(){
         printf("5 - Remover todas as ocorrencias de determinado caracter em uma string\n");
         printf("6 - Sair\n");
         scanf("%d", &op);
-    }
-    
+
+        switch (op)
+        {
+        case 1:
+            /* code */
+            break;
+        case 2:
+            /* code */
+            break;
+        case 3:
+            /* code */
+            break;
+        case 4:
+            /* code */
+            break;
+        case 5:
+            /* code */
+            break;
+        case 6:
+            /* code */
+            break;
+        default:
+            printf("Comando invalido");
+            break;
+        }
+
+    }   
 }
