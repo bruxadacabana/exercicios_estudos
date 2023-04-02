@@ -3,11 +3,15 @@
 
 #define TAM 30
 
+int nTam(char s[TAM]);
+
 void main(){
 
     int op, sel, s[TAM];
 
     printf("Digite uma string: ");
+    fflush(stdin);
+    gets(s);
 
     while (op != 6)
     {
@@ -24,7 +28,7 @@ void main(){
         switch (op)
         {
         case 1:
-            /* code */
+            printf("Tem %d caracteres", nTam(s));
             break;
         case 2:
             /* code */
@@ -47,4 +51,13 @@ void main(){
         }
 
     }   
+}
+
+int nTam(char s[TAM]){
+    int i = 0;
+    while (s[i] != '\0')
+    {
+        i++;
+    }
+    return i;
 }
