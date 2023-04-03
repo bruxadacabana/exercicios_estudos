@@ -4,10 +4,13 @@
 #define TAM 30
 
 int nTam(char s[TAM]);
+int nRep(char s[TAM], char letra);
+int nRen (char s[TAM], char letra);
 
 void main(){
 
-    int op, sel, s[TAM];
+    int op, sel;
+    char s[TAM], sec;
 
     printf("Digite uma string: ");
     fflush(stdin);
@@ -28,10 +31,13 @@ void main(){
         switch (op)
         {
         case 1:
-            printf("Tem %d caracteres", nTam(s));
+            printf("Essa string tem %d caracteres", nTam(s));
             break;
         case 2:
-            /* code */
+            printf("Qual caracter você deseja buscar? ");
+            fflush(stdin);
+            gets(sec);
+            printf("Esse caracter aparece %d vezes na string", nRep(s, sec));
             break;
         case 3:
             /* code */
@@ -40,7 +46,14 @@ void main(){
             /* code */
             break;
         case 5:
-            /* code */
+            printf("Qual caracter você deseja remover? ");
+            fflush(stdin);
+            gets(sec);
+            if ((nRen(s, sec)) != 0){
+                printf("Removido com sucesso");
+            } else{
+                printf("Não foram encontradas ocorrencias desse caracter na string informada");
+            }
             break;
         case 6:
             /* code */
@@ -60,4 +73,18 @@ int nTam(char s[TAM]){
         i++;
     }
     return i;
+}
+
+int nRep(char s[TAM], char letra){
+    int i, cont = 0;
+    for (i=0; s[i] != '\0'; i++){
+        if(s[i] == letra){
+            cont++;
+        }
+    }
+    return cont;
+}
+
+int nRen (char s[TAM], char letra){
+
 }
