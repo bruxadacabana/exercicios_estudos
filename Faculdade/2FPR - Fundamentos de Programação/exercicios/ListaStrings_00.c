@@ -3,9 +3,9 @@
 
 #define TAM 30
 
-void int nTam(char s[TAM]);
+int nTam(char s[TAM]);
 int nRep(char s[TAM], char letra);
-int nRen (char s[TAM], char letra);
+void nRen (char s[TAM], char letra);
 
 void main(){
 
@@ -20,8 +20,8 @@ void main(){
     {
         printf("\n\n--------------------------------------------");
         printf("\nO que voce deseja fazer?\n\n");
-        printf("1 - Determinar o número de caracteres de uma string\n");
-        printf("2 - Determinar o número de ocorrencias de um caracter em determinada string\n");
+        printf("1 - Determinar o numero de caracteres de uma string\n");
+        printf("2 - Determinar o numero de ocorrencias de um caracter em determinada string\n");
         printf("3 - Verificar se uma string e um palindromo,\n");
         printf("4 - Inverter uma string\n");
         printf("5 - Remover todas as ocorrencias de determinado caracter em uma string\n");
@@ -35,8 +35,7 @@ void main(){
             break;
         case 2:
             printf("Qual caracter você deseja buscar? ");
-            fflush(stdin);
-            gets(sec);
+            scanf("%c", &sec);
             printf("Esse caracter aparece %d vezes na string", nRep(s, sec));
             break;
         case 3:
@@ -47,16 +46,13 @@ void main(){
             break;
         case 5:
             printf("Qual caracter você deseja remover? ");
-            fflush(stdin);
-            gets(sec);
-            if ((nRen(s, sec)) != 0){
-                printf("Removido com sucesso");
-            } else{
-                printf("Não foram encontradas ocorrencias desse caracter na string informada");
-            }
+            scanf("%c", &sec);
+            nRen(s, sec);
+            printf("Removido com sucesso");
+            printf("String atualizada: %s", s);
             break;
         case 6:
-            /* code */
+            printf("\nTudo bem, obrigada por usar nossos servicos!");
             break;
         default:
             printf("Comando invalido");
@@ -85,14 +81,14 @@ int nRep(char s[TAM], char letra){
     return cont;
 }
 
-int nRen (char s[TAM], char letra){
-    //Remover todas as ocorrencias de determinado caracter em uma string
+void nRen (char s[TAM], char letra){
     int i, j;
     for (i=0; s[i] != '\0'; i++){
         if (s[i] == letra){
             for (j = i; s[j] != '\0'; j++){
-                s[j]
+                s[j] = s[j+1];
             }
+            i = i - 1;
         }
     }
 }
