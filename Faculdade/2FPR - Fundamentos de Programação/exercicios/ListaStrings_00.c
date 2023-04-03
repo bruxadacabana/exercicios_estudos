@@ -3,7 +3,7 @@
 
 #define TAM 30
 
-int nTam(char s[TAM]);
+void int nTam(char s[TAM]);
 int nRep(char s[TAM], char letra);
 int nRen (char s[TAM], char letra);
 
@@ -86,5 +86,13 @@ int nRep(char s[TAM], char letra){
 }
 
 int nRen (char s[TAM], char letra){
-
+    //Remover todas as ocorrencias de determinado caracter em uma string
+    int i, j;
+    for (i=0; s[i] != '\0'; i++){
+        if (s[i] == letra){
+            for (j = i; s[j] != '\0'; j++){
+                s[j]
+            }
+        }
+    }
 }
