@@ -7,7 +7,7 @@ int strTamanho(char s[TAM]);
 int strRepetido(char s[TAM], char letra);
 void strRemover (char s[TAM], char letra);
 int palindromo (char s[TAM]);
-int inverter (char s[TAM]);
+void inverter (char s[TAM]);
 
 void main(){
 
@@ -51,11 +51,7 @@ void main(){
                 }
                 break;
             case 5:
-                if (inverter (s) == 0){
-                    printf("Houve um erro");
-                } else{
-                    printf("String invertida com sucesso");
-                }
+                printf("String invertida com sucesso");
                 break;
             case 6:
                 printf("Qual caracter você deseja remover? ");
@@ -117,6 +113,12 @@ int palindromo (char s[TAM]){
     return 1;
 }
 
-int inverter (char s[TAM]){
-    
+void inverter (char s[TAM]){
+    int i, j, x;
+    j = (strTamanho(s) - 1);
+    for (i=0; i<j; i++, j--){
+        x = s[j];
+        s[j] = s[i];
+        s[i] = x;
+    }
 }
