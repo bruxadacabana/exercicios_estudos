@@ -11,7 +11,7 @@ void inverter (char s[TAM]);
 
 void main(){
 
-    int op, sel;
+    int op = 0, sel;
     char s[TAM], sec;
 
     printf("Digite uma string: ");
@@ -51,6 +51,7 @@ void main(){
                 }
                 break;
             case 5:
+                inverter(s);
                 printf("String invertida com sucesso");
                 break;
             case 6:
