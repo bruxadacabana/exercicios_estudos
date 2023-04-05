@@ -3,9 +3,11 @@
 
 #define TAM 30
 
-int nTam(char s[TAM]);
-int nRep(char s[TAM], char letra);
-void nRen (char s[TAM], char letra);
+int strTamanho(char s[TAM]);
+int strRepetido(char s[TAM], char letra);
+void strRemover (char s[TAM], char letra);
+int palindromo (char s[TAM]);
+int inverter (char s[TAM]);
 
 void main(){
 
@@ -31,25 +33,34 @@ void main(){
 
         switch (op){
             case 1 :
+                printf("String: %s", s);
                 break;
             case 2:
-                printf("Essa string tem %d caracteres", nTam(s));
+                printf("Essa string tem %d caracteres", strTamanho(s));
                 break;
             case 3:
-                printf("Qual caracter você deseja buscar? ");
+                printf("Qual caracter voce deseja buscar? ");
                 scanf(" %c", &sec);
-                printf("\nEsse caracter aparece %d vezes na string", nRep(s, sec));
+                printf("\nEsse caracter aparece %d vezes na string", strRepetido(s, sec));
                 break;
             case 4:
-                /* code */
+                if (palindromo(s) == 0){
+                    printf("Essa string nao e um palindromo");
+                } else{
+                    printf("Essa string e um palindromo");
+                }
                 break;
             case 5:
-                /* code */
+                if (inverter (s) == 0){
+                    printf("Houve um erro");
+                } else{
+                    printf("String invertida com sucesso");
+                }
                 break;
             case 6:
                 printf("Qual caracter você deseja remover? ");
                 scanf(" %c", &sec);
-                nRen(s, sec);
+                strRemover(s, sec);
                 printf("\nRemovido com sucesso");
                 printf("\nString atualizada: %s", s);
                 break;
@@ -64,7 +75,7 @@ void main(){
     }   
 }
 
-int nTam(char s[TAM]){
+int strTamanho(char s[TAM]){
     int i = 0;
     while (s[i] != '\0')
     {
@@ -73,7 +84,7 @@ int nTam(char s[TAM]){
     return i;
 }
 
-int nRep(char s[TAM], char letra){
+int strRepetido(char s[TAM], char letra){
     int i, cont = 0;
     for (i=0; s[i] != '\0'; i++){
         if(s[i] == letra){
@@ -83,7 +94,7 @@ int nRep(char s[TAM], char letra){
     return cont;
 }
 
-void nRen (char s[TAM], char letra){
+void strRemover (char s[TAM], char letra){
     int i, j;
     for (i=0; s[i] != '\0'; i++){
         if (s[i] == letra){
@@ -93,4 +104,19 @@ void nRen (char s[TAM], char letra){
             i = i - 1;
         }
     }
+}
+
+int palindromo (char s[TAM]){
+    int i, j;
+    j = (strTamanho(s) - 1);
+    for (i=0; i < j; i++, j--){
+        if (s[i] != s[j]){
+            return 0;
+        }
+    }
+    return 1;
+}
+
+int inverter (char s[TAM]){
+    
 }
