@@ -102,7 +102,7 @@ void strRemover (char s[TAM], char letra){
         }
     }
 }
-
+ 
 int palindromo (char s[TAM]){
     int i, j;
     j = (strTamanho(s) - 1);
