@@ -5,7 +5,7 @@
 
 void strCopia (char s2[TAM], char s1[TAM]);
 int strTam (char s[TAM]);
-int strConcat (char s1[TAM], char s2[TAM]);
+int strConcat (char s2[TAM], char s1[TAM]);
 int strCompar (char s1[TAM], char s2[TAM]);
 
 void main(){
@@ -37,9 +37,9 @@ void main(){
                 printf("\nSegunda string:  %s", destino);
                 break;
             case 2:
-                printf("De qual string voce gostaria de saber o tamanho?");
-                printf("\n 1 - Primeira string");
-                printf("\n 2 - Segunda string");
+                printf("De qual string voce gostaria de saber o tamanho?\n");
+                printf("1 - Primeira string\n");
+                printf("2 - Segunda string\n");
                 scanf("%d", &sec);
                 if (sec == 1){
                     printf("\nTamanho dessa string:  %d\n", strTam(origem));
@@ -55,7 +55,9 @@ void main(){
                 printf("String atualizada: %s", destino);
                 break;
             case 4:
-                
+                strConcat(destino, origem);
+                printf("\nFeito!\n");
+                printf("String atualizada: %s", destino);
                 break;
             case 5:
                 
@@ -92,6 +94,8 @@ int strTam (char s[TAM]){
     return i;
 }
 
-int strConcat (char s1[TAM], char s2[TAM]){}
+int strConcat (char s2[TAM], char s1[TAM]){
+    /*A string de origem permanecera inalterada e sera anexada ao fim da string de destino*/
+}
 
 int strCompar (char s1[TAM], char s2[TAM]){}
