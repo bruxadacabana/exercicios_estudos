@@ -5,7 +5,7 @@
 
 void strCopia (char s2[TAM], char s1[TAM]);
 int strTam (char s[TAM]);
-int strConcat (char s2[TAM], char s1[TAM]);
+void strConcat (char s2[TAM], char s1[TAM]);
 int strCompar (char s1[TAM], char s2[TAM]);
 
 void main(){
@@ -94,8 +94,13 @@ int strTam (char s[TAM]){
     return i;
 }
 
-int strConcat (char s2[TAM], char s1[TAM]){
+void strConcat (char s2[TAM], char s1[TAM]){
     /*A string de origem permanecera inalterada e sera anexada ao fim da string de destino*/
+    int i, j;
+    for (i = strTam(s2), j=0; (i<=(TAM - 1)) || (s1[j] != '\0'); i++, j++){
+        s2[i] = s1[j];
+    }
+    s2[i-1] = '\0';
 }
 
 int strCompar (char s1[TAM], char s2[TAM]){}
