@@ -3,7 +3,7 @@
 
 #define TAM 10
 
-int strCopia (char s2[TAM], char s1[TAM]);
+void strCopia (char s2[TAM], char s1[TAM]);
 int strTam (char s[TAM]);
 int strConcat (char s1[TAM], char s2[TAM]);
 int strCompar (char s1[TAM], char s2[TAM]);
@@ -50,7 +50,9 @@ void main(){
                 }
                 break;
             case 3:
-                
+                strCopia(destino, origem);
+                printf("\nFeito!\n");
+                printf("String atualizada: %s", destino);
                 break;
             case 4:
                 
@@ -69,7 +71,17 @@ void main(){
     } 
 }
 
-int strCopia (char s2[TAM], char s1[TAM]){}
+void strCopia (char s2[TAM], char s1[TAM]){
+    /*
+    Essa função copia o valor da string na segunda posição do argumento para uma variável string na primeira posição. O segundo argumento pode ser uma variável, uma expressão string ou um valor literal string contido entre aspas.
+    */
+    int i = 0;
+    while (s1[i] != '\0'){
+        s2[i] = s1[i];
+        i++;
+    }
+    s2[i] = '\0';
+}
 
 int strTam (char s[TAM]){
     int i = 0;
