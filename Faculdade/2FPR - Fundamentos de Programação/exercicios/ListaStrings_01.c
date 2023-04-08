@@ -60,7 +60,14 @@ void main(){
                 printf("String atualizada: %s", destino);
                 break;
             case 5:
-                
+                sec = strCompar(origem, destino);
+                if (sec == 1){
+                    printf("A primeira string vem antes da segunda");
+                } else if (sec == -1) {
+                    printf("A segunda string vem antes da primeira");
+                } else{
+                    printf("As strings sao iguais");
+                }
                 break;
             case 6:
                 printf("\nTudo bem, obrigada por usar nossos servicos!");
@@ -74,9 +81,6 @@ void main(){
 }
 
 void strCopia (char s2[TAM], char s1[TAM]){
-    /*
-    Essa função copia o valor da string na segunda posição do argumento para uma variável string na primeira posição. O segundo argumento pode ser uma variável, uma expressão string ou um valor literal string contido entre aspas.
-    */
     int i = 0;
     while (s1[i] != '\0'){
         s2[i] = s1[i];
@@ -103,4 +107,21 @@ void strConcat (char s2[TAM], char s1[TAM]){
     s2[i-1] = '\0';
 }
 
-int strCompar (char s1[TAM], char s2[TAM]){}
+int strCompar (char s1[TAM], char s2[TAM]){
+    /*
+    0 - strings iguais
+    1 - primeira string é "maior"/vem antes
+    -1 - segunda string é "maior"/vem antes
+    */
+   int i=0;
+   while ((s1[i] != '\0') && (s2[i] != '\0')){
+    if (s1[i] < s2[i]){
+        return 1;
+    }
+    if (s1[i] > s2[i]){
+        return -1;
+    }
+    i++;
+   }
+   return 0;
+}
