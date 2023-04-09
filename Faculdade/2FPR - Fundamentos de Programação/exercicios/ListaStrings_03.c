@@ -11,12 +11,12 @@ void main(){
 
     printf("Digite uma string: ");
     gets(origem);
-    printf("\0Digite a posicao onde iniciara a substring: ");
+    printf("\nDigite a posicao onde iniciara a substring: ");
     scanf("%d", &p);
-    printf("\0Digite a quantidade de caracteres a serem copiados: ");
+    printf("\nDigite a quantidade de caracteres a serem copiados: ");
     scanf("%d", &n);
 
-    if ((p > strlen(origem)) || (p <= 0) || (n <= 0)){
+    if ((p > (strlen(origem))) || (p <= 0) || (n <= 0)){
         printf("Substring inválida");
     } else{
         copiaSub(origem, destino, p, n);
@@ -27,6 +27,13 @@ void main(){
 }
 
 void copiaSub (char s[TAM], char sub[TAM], int indice, int quant){
-    int i;
-    
+    int i, j;
+    for (
+        i = (indice - 1), j=0; 
+        (s[i] != '\0') || (i < (indice + (quant - 1))); 
+        i++, j++
+        ){
+            sub[j] = s[i];
+    }
+    sub[j] = '\0';
 }
