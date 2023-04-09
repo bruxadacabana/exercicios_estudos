@@ -30,7 +30,7 @@ void copiaSub (char s[TAM], char sub[TAM], int indice, int quant){
     int i, j;
     for (
         i = (indice - 1), j=0; 
-        (s[i] != '\0') || (i < (indice + (quant - 1))); 
+        (s[i] != '\0') && (j < quant); 
         i++, j++
         ){
             sub[j] = s[i];
