@@ -18,4 +18,8 @@ b) podem considerar que não haverá mais de um candidato com a mesma quantidade
 
 typedef struct {
 
-} Tnome;
+} TEleitores;
+
+typedef struct {
+
+} TCandidatos;
