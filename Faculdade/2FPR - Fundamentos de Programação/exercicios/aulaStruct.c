@@ -68,5 +68,5 @@ void main(){
         scanf("%f", turma[i].CR);
         printf("Data de nascimento [DD MM AAAA]: ");
         scanf("%d %d %d", &turma[i].datadenascimento.dia, &turma[i].datadenascimento.mes, &turma[i].datadenascimento.ano);
-    }
+    }  
 }
