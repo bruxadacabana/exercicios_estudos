@@ -18,36 +18,42 @@ typedef struct {
     TData aniversario;
 } TPessoa;
 
-int mensal (TPessoa agenda[TAM]);
-void aniversarios (TPessoa agenda[TAM], int mesIn, int mesFi);
+int mensal (TPessoa agenda[TAM], int mes);
+void aniversarios (TPessoa agenda[TAM], TData inicio, TData final);
 void inserir (TPessoa agenda[TAM]);
 void exibir (TPessoa agenda[TAM]);
 
 void main(){
     TPessoa agenda[TAM];
-    int m1, m2, sec, op=0;
+    TData d1, d2;
+    int mes, op=0;
 
     printf("Primeiro e necessario preencher a agenda!\n");
 
     inserir(agenda);
 
-    while (op =! 4){
+    while (op != 4){
         printf("\n\n--------------------------------------------");
         printf("\nO que voce deseja fazer?\n\n");
         printf("1 - Exibir agenda\n");
-        printf("2 - Funcao 01\n");
-        printf("3 - Funcao 02\n");
+        printf("2 - Exibir quantidade de pessoas que fazem aniversario num mes\n");
+        printf("3 - Exibir aniversariantes de um periodo\n");
         printf("4 - Sair\n");
         scanf("%d", &op);
         switch (op){
             case 1:
-                
+                exibir(agenda);
                 break;
             case 2:
-                /* code */
+                printf("Qual mes voce deseja saber? ");
+                scanf("%d", mes);
+                printf("O total de pessoas que faz aniversario nesse mes e %d", mensal(agenda, mes));
                 break;
             case 3:
-                /* code */
+                printf("Digite mes e ano a partir do qual deseja exibir (DD MM): ");
+                scanf("%d %d", &d1.dia, &d1.mes);
+                printf("Digite mes e ano até onde deseja exibir (DD MM): ");
+                scanf("%d %d", &d2.dia, &d2.mes);
                 break;
             case 4:
                 printf("\nTudo bem, obrigada por usar nossos servicos!");
@@ -78,6 +84,10 @@ void inserir (TPessoa agenda[TAM]){
     }
 }
 
-int mensal (TPessoa agenda[TAM]){}
-void aniversarios (TPessoa agenda[TAM], int mesIn, int mesFi){}
+int mensal (TPessoa agenda[TAM], int mes){
+    // Determinar a quantidade de pessoas que fazem aniversário no mês M
+}
+void aniversarios (TPessoa agenda[TAM], TData inicio, TData final){
+    // Exibir os nomes de todas pessoas que fazem aniversário entre as datas d1 e d2, ambas do tipo TData
+}
 
