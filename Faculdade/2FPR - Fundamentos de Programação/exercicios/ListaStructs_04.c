@@ -47,7 +47,7 @@ void main(){
             case 2:
                 printf("Qual mes voce deseja saber? ");
                 scanf("%d", mes);
-                printf("O total de pessoas que faz aniversario nesse mes e %d", mensal(agenda, mes));
+                printf("O total de pessoas que faz aniversario nesse mes e %d", mensal(agenda, (mes - 1)));
                 break;
             case 3:
                 printf("Digite mes e ano a partir do qual deseja exibir (DD MM): ");
@@ -86,8 +86,17 @@ void inserir (TPessoa agenda[TAM]){
 
 int mensal (TPessoa agenda[TAM], int mes){
     // Determinar a quantidade de pessoas que fazem aniversário no mês M
-
+    int i, cont;
+    for (i=0, cont = 0; i < TAM; i++){
+        if (agenda[i].aniversario.mes == mes){
+            cont ++
+        }
+    }
+    return cont;
 }
 void aniversarios (TPessoa agenda[TAM], TData inicio, TData final){
     // Exibir os nomes de todas pessoas que fazem aniversário entre as datas d1 e d2, ambas do tipo TData
+    int i;
+    for (i=0; i<TAM; i++){
+    }
 } 
