@@ -86,8 +86,8 @@ void inserir (TPessoa agenda[TAM]){
 
 int mensal (TPessoa agenda[TAM], int mes){
     // Determinar a quantidade de pessoas que fazem aniversário no mês M
+
 }
 void aniversarios (TPessoa agenda[TAM], TData inicio, TData final){
     // Exibir os nomes de todas pessoas que fazem aniversário entre as datas d1 e d2, ambas do tipo TData
-}
-
+} 
