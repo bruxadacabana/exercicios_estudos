@@ -96,20 +96,13 @@ int mensal (TPessoa agenda[TAM], int mes){
 }
 void aniversarios (TPessoa agenda[TAM], TData inicio, TData final){
     // Exibir os nomes de todas pessoas que fazem aniversário entre as datas d1 e d2, ambas do tipo TData
-    int i;
-    for (i=0; i<TAM; i++){
-        //meses    
-        if(){
-            //caso específico do inicio
-            if(){
-
-            }
-            //caso do final
-            else if ()
-            {
-                /* code */
-            }
-            
+    int i, j;
+    if (inicio.mes == final.mes){
+        for (i=inicio.dia; i<final.dia; i++){
+            //printar nomes 
+        } 
+    } else {
+        for (i=0; i<TAM; i++){ 
         }
     }
 } 
