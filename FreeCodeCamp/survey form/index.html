@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+    <form action="" id="survey-form" method="post">
+        <fieldset>
+            <label for="name" id="name-label">
+                Name
+                <input type="text" name="name" id="name" placeholder="Enter your name" required>
+            </label>
+            <label for="email" id="email-label">
+                Email
+                <input type="email" name="email" id="email" placeholder="Enter your Email" required>
+            </label>
+            <label for="number" id="number-label">
+                Age (optional)
+                <input type="number" name="number" id="number" min="10" max="99" placeholder="Age" required>
+            </label>
+            <label for="dropdown">
+                Which option best describes your current role?
+                <select name="role" id="dropdown">
+                    <option value="">Select current role</option>
+                    <option value="student">Student</option>
+                    <option value="fulltimej">Full Time Job</option>
+                    <option value="fulltimel">Full Time Leaner</option>
+                    <option value="no">Prefer not to say</option>
+                    <option value="other">Other</option>
+                </select>
+            </label>
+        </fieldset>
+        <fieldset>
+            <p>Would you recommend freeCodeCamp to a friend?</p>
+            <label for="definitely">
+                <input type="radio" name="recommendation" id="definitely" value="definitely" class="inline">
+                Definitely
+            </label>
+            <label for="maybe">
+                <input type="radio" name="recommendation" id="maybe" value="maybe" class="inline">
+                Maybe
+            </label>
+            <label for="notsure">
+                <input type="radio" name="recommendation" id="notsure" value="notsure" class="inline">
+                Not sure
+            </label>
+        </fieldset>
+        <fieldset>
+            <label for="suggestion">
+                What would you like to see improved? (Check all that apply)
+                <label for="sug_frontend">
+                    <input type="checkbox" name="sug_frontend" id="sug_frontend" value="sug_frontend" class="inline">
+                    Front-end Projects
+                </label>
+                <label for="sug_backend">
+                    <input type="checkbox" name="sug_backend" id="sug_backend" value="sug_backend" class="inline">
+                    Back-end Projects
+                </label>
+                <label for="sug_opensource">
+                    <input type="checkbox" name="sug_opensource" id="sug_opensource" value="sug_opensource" class="inline">
+                    Open Source Community
+                </label>
+                <label for="sug_challenges">
+                    <input type="checkbox" name="sug_challenges" id="sug_challenges" value="sug_challenges" class="inline">
+                    Challenges
+                </label>
+                <label for="sug_forum">
+                    <input type="checkbox" name="sug_forum" id="sug_forum" value="sug_forum" class="inline">
+                    Forum
+                </label>
+                <label for="sub_addcourses">
+                    <input type="checkbox" name="sub_addcourses" id="sub_addcourses" value="sub_addcourses" class="inline">
+                    Additional Courses
+                </label>
+            </label>
+            <label for="comments">
+                Any comments or suggestions?
+                <textarea name="" id="comments" cols="30" rows="10" placeholder="Enter yout comment here..."></textarea>
+            </label>
+        </fieldset>
+        <input type="submit" id="submit" value="Submit">
+    </form>
+</body>
+</html>
