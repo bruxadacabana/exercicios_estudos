@@ -29,10 +29,13 @@ typedef struct {
 
 void inserirCarros (TVeiculo carros[TAM], int *indice);
 void exibirCarros(TVeiculo carros[TAM], int indice);
+void exibirEspec (TVeiculo carros[TAM], int indice, char m[16], int a1, int a2, float preco);
 
 void main(){
     TVeiculo carros[TAM];
-    int estoque=0, op=0;
+    char modelo[16];
+    int estoque=0, op=0, ano1, ano2, placa;
+    float preco;
 
     while (op != 6){
         printf("\n\n--------------------------------------------");
@@ -52,7 +55,16 @@ void main(){
                 exibirCarros (carros, estoque);
                 break;
             case 3:
-                
+                fflush(stdin);
+                printf("Digite o modelo do carro desejado: ");
+                gets(modelo);
+                printf("Digite o ano onde deseja iniciar a pesquisa: ");
+                scanf("%d", &ano1);
+                printf("Digite o ano onde deseja limitar sua pesquisa: ");
+                scanf("%d", &ano2);
+                printf("Valor maximo: ");
+                scanf("%f", &preco);
+                exibirEspec (carros, estoque, modelo, ano1, ano2, preco);
                 break;
             case 4:
                 
@@ -129,6 +141,34 @@ void exibirCarros (TVeiculo carros[TAM], int indice){
             }
             printf("Valor: R$ %.2f\n", carros[i].valor);
             printf("\n");
+        }
+    }
+}
+
+void exibirEspec (TVeiculo carros[TAM], int indice, char m[16], int a1, int a2, float preco){
+    //Exibir todos os carros do modelo m, ano de fabricação entre a1 e a2 (inclusive), com valor não superior a x reais
+    int i;
+    if (indice == 0){
+        printf("Nao ha carros cadastrados");
+    } else {
+        for (i=0; i<indice; i++){
+            if ((carros[i].modelo == m) && (carros[i].modeliFab.anoFabric <= a1) && (carros[i].modeliFab.anoFabric >= a2) && (carros[i].valor <= preco)){
+                printf("-------------------------------------");
+                printf("Placa do carro: %s\n", carros[i].placa);
+                printf("Modelo: %s\n", carros[i].modelo);
+                printf("Marca: %s\n", carros[i].marca);
+                printf("Cor: %s\n", carros[i].cor);
+                printf("Ano do modelo: %d\n", carros[i].modeliFab.anoModelo);
+                printf("Ano de fabricacao: %d\n", carros[i].modeliFab.anoFabric);
+                if (carros[i].quilometragem != 0){
+                    printf("Tipo: %s\n", carros[i].tipo);
+                    printf("Quilometragem: %.0f\n", carros[i].quilometragem);
+                } else {
+                    printf("Tipo: %s\n", carros[i].tipo);
+                }
+                printf("Valor: R$ %.2f\n", carros[i].valor);
+                printf("\n");
+            }
         }
     }
 }
