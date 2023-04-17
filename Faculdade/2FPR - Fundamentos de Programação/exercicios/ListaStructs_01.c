@@ -43,7 +43,7 @@ void main(){
         printf("1 - Inserir carro\n");
         printf("2 - Exibir todos os carros\n");
         printf("3 - Exibir carro especifico\n");
-        printf("4 - Reajustar preços 0km\n");
+        printf("4 - Reajustar precos 0km\n");
         printf("5 - Excluir carro\n");
         printf("6 - Sair\n");
         scanf("%d", &op);
@@ -126,7 +126,7 @@ void exibirCarros (TVeiculo carros[TAM], int indice){
         printf("Nao ha carros cadastrados");
     } else{
         for (i=0; i<indice;i++){
-            printf("-------------------------------------");
+            printf("-------------------------------------\n");
             printf("Placa do carro: %s\n", carros[i].placa);
             printf("Modelo: %s\n", carros[i].modelo);
             printf("Marca: %s\n", carros[i].marca);
@@ -146,14 +146,14 @@ void exibirCarros (TVeiculo carros[TAM], int indice){
 }
 
 void exibirEspec (TVeiculo carros[TAM], int indice, char m[16], int a1, int a2, float preco){
-    //Exibir todos os carros do modelo m, ano de fabricação entre a1 e a2 (inclusive), com valor não superior a x reais
+//Exibir todos os carros do modelo m, ano de fabricação entre a1 e a2 (inclusive), com valor não superior a x reais
     int i;
     if (indice == 0){
         printf("Nao ha carros cadastrados");
     } else {
-        for (i=0; i<indice; i++){
-            if ((carros[i].modelo == m) && (carros[i].modeliFab.anoFabric <= a1) && (carros[i].modeliFab.anoFabric >= a2) && (carros[i].valor <= preco)){
-                printf("-------------------------------------");
+        for (i = 0; i < indice; i++){
+            if ((carros[i].modelo == m) && (carros[i].modeliFab.anoFabric >= a1) && (carros[i].modeliFab.anoFabric <= a2) && (carros[i].valor <= preco)){
+                printf("-------------------------------------\n");
                 printf("Placa do carro: %s\n", carros[i].placa);
                 printf("Modelo: %s\n", carros[i].modelo);
                 printf("Marca: %s\n", carros[i].marca);
