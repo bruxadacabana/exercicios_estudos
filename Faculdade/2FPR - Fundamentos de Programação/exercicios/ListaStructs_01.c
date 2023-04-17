@@ -49,7 +49,7 @@ void main(){
                 inserirCarros (carros, &estoque);
                 break;
             case 2:
-                
+                exibirCarros (carros, estoque);
                 break;
             case 3:
                 
@@ -72,6 +72,7 @@ void main(){
 }
 
 void inserirCarros (TVeiculo carros[TAM], int *indice){
+    fflush(stdin);
     printf("Digite a placa do carro: ");
     gets(carros[*indice].placa);
     fflush(stdin);
@@ -90,7 +91,7 @@ void inserirCarros (TVeiculo carros[TAM], int *indice){
     printf("Digite ano do modelo do carro: ");
     scanf("%d", &carros[*indice].modeliFab.anoModelo);
     printf("Digite o valor do carro: ");
-    scanf("%d", &carros[*indice].valor);
+    scanf("%f", &carros[*indice].valor);
     if (carros[*indice].quilometragem != 0){
         carros[*indice].tipo[0] = 'U';
         carros[*indice].tipo[1] = 'S';
@@ -104,7 +105,7 @@ void inserirCarros (TVeiculo carros[TAM], int *indice){
         carros[*indice].tipo[2] = 'M';
         carros[*indice].tipo[3] = '\0';
     }
-    *indice++;
+    *indice = *indice + 1;
 }
 
 void exibirCarros (TVeiculo carros[TAM], int indice){
@@ -113,15 +114,20 @@ void exibirCarros (TVeiculo carros[TAM], int indice){
         printf("Nao ha carros cadastrados");
     } else{
         for (i=0; i<indice;i++){
-            printf("Placa do carro: %s\n", );
-            printf("Modelo: %\n", );
-            printf("Marca: \n", );
-            printf("Cor: \n", );
-            printf("Quilometragem: \n", );
-            printf("Ano do modelo: \n", );
-            printf("Ano de fabricação: \n", );
-            printf("Valor: R$ %.2f\n", );
-            printf("\n", );
+            printf("-------------------------------------");
+            printf("Placa do carro: %s\n", carros[i].placa);
+            printf("Modelo: %s\n", carros[i].modelo);
+            printf("Marca: %s\n", carros[i].marca);
+            printf("Cor: %s\n", carros[i].cor);
+            printf("Ano do modelo: %d\n", carros[i].modeliFab.anoModelo);
+            printf("Ano de fabricacao: %d\n", carros[i].modeliFab.anoFabric);
+            if (carros[i].quilometragem != 0){
+                printf("Tipo: %s\n", carros[i].tipo);
+                printf("Quilometragem: %.0f\n", carros[i].quilometragem);
+            } else {
+                printf("Tipo: %s\n", carros[i].tipo);
+            }
+            printf("Valor: R$ %.2f\n", carros[i].valor);
             printf("\n");
         }
     }
