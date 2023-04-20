@@ -30,6 +30,7 @@ typedef struct {
 void inserirCarros (TVeiculo carros[TAM], int *indice);
 void exibirCarros(TVeiculo carros[TAM], int indice);
 void exibirEspec (TVeiculo carros[TAM], int indice, char m[16], int a1, int a2, float preco);
+void reajuste (TVeiculo carros[TAM], int indice);
 
 void main(){
     TVeiculo carros[TAM];
@@ -56,18 +57,22 @@ void main(){
                 break;
             case 3:
                 fflush(stdin);
-                printf("Digite o modelo do carro desejado: ");
-                gets(modelo);
-                printf("Digite o ano onde deseja iniciar a pesquisa: ");
-                scanf("%d", &ano1);
-                printf("Digite o ano onde deseja limitar sua pesquisa: ");
-                scanf("%d", &ano2);
-                printf("Valor maximo: ");
-                scanf("%f", &preco);
-                exibirEspec (carros, estoque, modelo, ano1, ano2, preco);
+                if (estoque == 0){
+                    printf("Nao ha carros cadastrados");
+                } else{
+                    printf("Digite o modelo do carro desejado: ");
+                    gets(modelo);
+                    printf("Digite o ano onde deseja iniciar a pesquisa: ");
+                    scanf("%d", &ano1);
+                    printf("Digite o ano onde deseja limitar sua pesquisa: ");
+                    scanf("%d", &ano2);
+                    printf("Valor maximo: ");
+                    scanf("%f", &preco);
+                    exibirEspec (carros, estoque, modelo, ano1, ano2, preco);
+                }
                 break;
             case 4:
-                
+                reajuste(carros, estoque);
                 break;
             case 5:
                 
@@ -168,6 +173,22 @@ void exibirEspec (TVeiculo carros[TAM], int indice, char m[16], int a1, int a2, 
                 }
                 printf("Valor: R$ %.2f\n", carros[i].valor);
                 printf("\n");
+            }
+        }
+    }
+}
+
+void reajuste (TVeiculo carros[TAM], int indice){
+    //Reajustar os valores de todos os carros 0 km, considerando um aumento de 2.5%
+
+    int i;
+
+    if (indice == 0){
+        printf("Nao ha carros cadastrados");
+    } else {
+        for (i=0; i<indice; i++){
+            if (carros[i].quilometragem == 0) {
+                carros[i].valor = (carros[i].valor * 0.025);
             }
         }
     }
