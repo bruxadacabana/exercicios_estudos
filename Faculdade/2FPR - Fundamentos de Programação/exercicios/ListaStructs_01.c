@@ -31,11 +31,12 @@ void inserirCarros (TVeiculo carros[TAM], int *indice);
 void exibirCarros(TVeiculo carros[TAM], int indice);
 void exibirEspec (TVeiculo carros[TAM], int indice, char m[16], int a1, int a2, float preco);
 void reajuste (TVeiculo carros[TAM], int indice);
+void excluir (TVeiculo carros[TAM], char placa[8]);
 
 void main(){
     TVeiculo carros[TAM];
-    char modelo[16];
-    int estoque=0, op=0, ano1, ano2, placa;
+    char modelo[16], placa[8];
+    int estoque=0, op=0, ano1, ano2;
     float preco;
 
     while (op != 6){
@@ -75,7 +76,10 @@ void main(){
                 reajuste(carros, estoque);
                 break;
             case 5:
-                
+                fflush(stdin);
+                printf("Digite a placa do carro que deseja excluir: ");
+                gets(placa);
+                excluir(carros, placa);
                 break;
             case 6:
                 printf("\nTudo bem, obrigada por usar nossos servicos!");
@@ -192,4 +196,8 @@ void reajuste (TVeiculo carros[TAM], int indice){
             }
         }
     }
+}
+
+void excluir (TVeiculo carros[TAM], char placa[8]){
+    // Retirar do estoque um determinado veículo, dada a sua placa.
 }
