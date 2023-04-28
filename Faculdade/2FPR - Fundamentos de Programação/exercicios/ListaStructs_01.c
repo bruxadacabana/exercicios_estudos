@@ -30,11 +30,13 @@ typedef struct {
 void inserirCarros (TVeiculo carros[TAM], int *indice);
 void exibirCarros(TVeiculo carros[TAM], int indice);
 void exibirEspec (TVeiculo carros[TAM], int indice, char m[16], int a1, int a2, float preco);
+void reajuste (TVeiculo carros[TAM], int indice);
+void excluir (TVeiculo carros[TAM], char placa[8]);
 
 void main(){
     TVeiculo carros[TAM];
-    char modelo[16];
-    int estoque=0, op=0, ano1, ano2, placa;
+    char modelo[16], placa[8];
+    int estoque=0, op=0, ano1, ano2;
     float preco;
 
     while (op != 6){
@@ -56,21 +58,28 @@ void main(){
                 break;
             case 3:
                 fflush(stdin);
-                printf("Digite o modelo do carro desejado: ");
-                gets(modelo);
-                printf("Digite o ano onde deseja iniciar a pesquisa: ");
-                scanf("%d", &ano1);
-                printf("Digite o ano onde deseja limitar sua pesquisa: ");
-                scanf("%d", &ano2);
-                printf("Valor maximo: ");
-                scanf("%f", &preco);
-                exibirEspec (carros, estoque, modelo, ano1, ano2, preco);
+                if (estoque == 0){
+                    printf("Nao ha carros cadastrados");
+                } else{
+                    printf("Digite o modelo do carro desejado: ");
+                    gets(modelo);
+                    printf("Digite o ano onde deseja iniciar a pesquisa: ");
+                    scanf("%d", &ano1);
+                    printf("Digite o ano onde deseja limitar sua pesquisa: ");
+                    scanf("%d", &ano2);
+                    printf("Valor maximo: ");
+                    scanf("%f", &preco);
+                    exibirEspec (carros, estoque, modelo, ano1, ano2, preco);
+                }
                 break;
             case 4:
-                
+                reajuste(carros, estoque);
                 break;
             case 5:
-                
+                fflush(stdin);
+                printf("Digite a placa do carro que deseja excluir: ");
+                gets(placa);
+                excluir(carros, placa);
                 break;
             case 6:
                 printf("\nTudo bem, obrigada por usar nossos servicos!");
@@ -171,4 +180,24 @@ void exibirEspec (TVeiculo carros[TAM], int indice, char m[16], int a1, int a2, 
             }
         }
     }
+}
+
+void reajuste (TVeiculo carros[TAM], int indice){
+    //Reajustar os valores de todos os carros 0 km, considerando um aumento de 2.5%
+
+    int i;
+
+    if (indice == 0){
+        printf("Nao ha carros cadastrados");
+    } else {
+        for (i=0; i<indice; i++){
+            if (carros[i].quilometragem == 0) {
+                carros[i].valor = (carros[i].valor * 0.025);
+            }
+        }
+    }
+}
+
+void excluir (TVeiculo carros[TAM], char placa[8]){
+    // Retirar do estoque um determinado veículo, dada a sua placa.
 }
