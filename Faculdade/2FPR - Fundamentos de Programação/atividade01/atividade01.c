@@ -27,7 +27,7 @@ void main(){
     if (resultado == 0){
         printf("A coluna digitada não existe.");
     } else{
-        printf("Feito com sucesso! Segue matriz atualizada: \n");
+        printf("\n\nFeito com sucesso! Segue matriz atualizada: \n");
         exibir(matriz);
     }
 }
@@ -43,12 +43,12 @@ int moverColuna(int m[LINHA][COLUNA], int c){
 
     for(j=c; j<=COLUNA-1; j++){
         for(i=0; i<LINHA; i++){
-            m[i][j] = m[i+1][j+1];
+            m[i][j] = m[i][j+1];
         }
     }
 
     for(i=0;i<LINHA; i++){
-        
+        m[i][COLUNA-1] = vetor[i];
     }
 
     return 1;
@@ -64,12 +64,12 @@ void copiarColuna(int c, int m[LINHA][COLUNA], int v[LINHA]){
 void exibir (int m[LINHA][COLUNA]){
     int i, j;
 	
-	printf ("\n\nElementos da matriz:\n");
+	printf ("\nElementos da matriz:\n");
 	for (i=0; i<LINHA; i++)
 	{
 		for (j=0; j<COLUNA; j++)
 		{
-			printf ("%d ", m[i][j]);
+			printf ("| %d ", m[i][j]);
 		}
 		
 		printf ("\n");
