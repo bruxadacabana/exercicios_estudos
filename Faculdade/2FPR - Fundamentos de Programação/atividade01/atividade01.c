@@ -41,8 +41,8 @@ int moverColuna(int m[LINHA][COLUNA], int c){
 
     copiarColuna(c, m, vetor)
 
-    for(i=0; (i<COLUNA) && (); i++){
-        
+    for(i=0; i<COLUNA; i++){
+
     }
 }
 
