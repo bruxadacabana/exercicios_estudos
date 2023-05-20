@@ -11,7 +11,7 @@ Consequentemente, as colunas C+1 à última deverão serão deslocadas uma posi�
 int moverColuna(int m[LINHA][COLUNA], int c);
 void exibir (int m[LINHA][COLUNA]);
 void gerar (int m[LINHA][COLUNA]);
-void copiarColuna(int c, int m[LINHA][COLUNA], int v[COLUNA]);
+void copiarColuna(int c, int m[LINHA][COLUNA], int v[LINHA]);
 
 void main(){
     int c, resultado, matriz[LINHA][COLUNA];
@@ -33,7 +33,7 @@ void main(){
 }
 
 int moverColuna(int m[LINHA][COLUNA], int c){
-    int i, vetor[COLUNA];
+    int i, vetor[LINHA];
 
     if (c >= COLUNA){
         return 0;
@@ -46,10 +46,10 @@ int moverColuna(int m[LINHA][COLUNA], int c){
     }
 }
 
-void copiarColuna(int c, int m[LINHA][COLUNA], int v[COLUNA]){
-    int i, j;
-    for(i=0;i<COLUNA; i++){
-        v[i] = m[i][COLUNA];
+void copiarColuna(int c, int m[LINHA][COLUNA], int v[LINHA]){
+    int i;
+    for(i=0;i<LINHA; i++){
+        v[i] = m[i][c];
     }
 }
 
