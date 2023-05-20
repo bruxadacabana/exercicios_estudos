@@ -33,7 +33,7 @@ void main(){
 }
 
 int moverColuna(int m[LINHA][COLUNA], int c){
-    int i, vetor[LINHA];
+    int i, j, vetor[LINHA];
 
     if (c >= COLUNA){
         return 0;
@@ -41,11 +41,16 @@ int moverColuna(int m[LINHA][COLUNA], int c){
 
     copiarColuna(c, m, vetor);
 
-    for(i=0; i<LINHA; i++){
-        for(j=c; j<COLUNA; j++){
-            
+    for(j=c; j<=COLUNA-1; j++){
+        for(i=0; i<LINHA; i++){
+            m[i][j] = m[i+1][j+1];
         }
     }
+
+    for(i=0;i<LINHA; i++){
+        
+    }
+
     return 1;
 }
 
