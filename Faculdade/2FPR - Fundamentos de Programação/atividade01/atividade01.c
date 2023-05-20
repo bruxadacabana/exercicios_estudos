@@ -39,16 +39,19 @@ int moverColuna(int m[LINHA][COLUNA], int c){
         return 0;
     }
 
-    copiarColuna(c, m, vetor)
+    copiarColuna(c, m, vetor);
 
-    for(i=0; i<COLUNA; i++){
-
+    for(i=0; i<LINHA; i++){
+        for(j=c; j<COLUNA; j++){
+            
+        }
     }
+    return 1;
 }
 
 void copiarColuna(int c, int m[LINHA][COLUNA], int v[LINHA]){
     int i;
-    for(i=0;i<LINHA; i++){
+    for(i=0; i<LINHA; i++){
         v[i] = m[i][c];
     }
 }
