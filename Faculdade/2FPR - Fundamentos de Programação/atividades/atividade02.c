@@ -40,9 +40,9 @@ int subst(char str[], char s2[], int inicio, int fim){
 
     tams2 = strlen(s2);
 
-    tam = (tams2 - ((inicio-fim)+1)); // calculo da quantidade de espaços q se deve andar para a direita
+    tam = (tams2 - ((fim - inicio)+1)); // calculo da quantidade de espaços q se deve andar para a direita
 
-    mover(str, (fim+1), tams2);
+    mover(str, (fim+1), tam);
 
     /*if ((inicio >= tam) || (fim >= tam)){
         return 0;
@@ -51,8 +51,6 @@ int subst(char str[], char s2[], int inicio, int fim){
     for(i=inicio, j=0; s2[j] != '\0'; i++,j++){
         str[i] = s2[j];
     }
-
-
 
     return 1;
 
