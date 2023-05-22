@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-
+#define TAM 20
 
 void copiaSub (char s[TAM], char sub[TAM], int indice, int quant);
 
