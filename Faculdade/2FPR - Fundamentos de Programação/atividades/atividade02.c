@@ -7,7 +7,7 @@ Desenvolver uma função que, dada uma string str, substitua uma substring s1 de
 
 #define TOTAL 20
 
-int subst(char str[], char s2[], int inicio, int fim);
+void subst(char str[], char s2[], int inicio, int fim);
 void mover(char str[], int inicio, int tam);
 
 void main(){
@@ -24,18 +24,14 @@ void main(){
     printf("\nDigite a ultina posicao: ");
     scanf("%d", &fim);
 
-    resultado = subst(str, s2, inicio, fim);
+    subst(str, s2, inicio, fim);
 
-    if (resultado == 0){
-        printf("Houve um erro");
-    } else{
-        printf("\nSegue string atualizada:");
-        printf("\n%s", str);
-    }
+    printf("\nSegue string atualizada:");
+    printf("\n%s", str);
 
 }
 
-int subst(char str[], char s2[], int inicio, int fim){
+void subst(char str[], char s2[], int inicio, int fim){
     int i, j, tams2, tam;
 
     tams2 = strlen(s2);
@@ -44,15 +40,10 @@ int subst(char str[], char s2[], int inicio, int fim){
 
     mover(str, (fim+1), tam);
 
-    /*if ((inicio >= tam) || (fim >= tam)){
-        return 0;
-    }*/
-
     for(i=inicio, j=0; s2[j] != '\0'; i++,j++){
         str[i] = s2[j];
     }
 
-    return 1;
 
 }
 
