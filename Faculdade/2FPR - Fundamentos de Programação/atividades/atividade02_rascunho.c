@@ -7,8 +7,7 @@ Desenvolver uma função que, dada uma string str, substitua uma substring s1 de
 
 #define TOTAL 20
 
-int subst(char str[], char s2[], int inicio, int fim);
-void mover(char str[], int inicio, int tam);
+int subst(char str[TOTAL], char s2[TOTAL], int inicio, int fim);
 
 void main(){
     char str[TOTAL] = "e ai, vc vem?", 
@@ -35,32 +34,19 @@ void main(){
 
 }
 
-int subst(char str[], char s2[], int inicio, int fim){
-    int i, j, tams2, tam;
+int subst(char str[TOTAL], char s2[TOTAL], int inicio, int fim){
+    int i, j, tam;
 
-    tams2 = strlen(s2);
-
-    tam = (tams2 - ((inicio-fim)+1)); // calculo da quantidade de espaços q se deve andar para a direita
-
-    mover(str, (fim+1), tams2);
+    tam = strlen(str);
 
     /*if ((inicio >= tam) || (fim >= tam)){
         return 0;
     }*/
 
-    for(i=inicio, j=0; s2[j] != '\0'; i++,j++){
+    for(i=inicio, j=0; i<fim; i++,j++){
         str[i] = s2[j];
     }
 
-
-
     return 1;
 
-}
-
-void mover(char str[], int inicio, int tam){
-    int i;
-    for (i=strlen(str); i >= inicio; i--){
-        str[i+tam] = str[i];
-    }
 }
