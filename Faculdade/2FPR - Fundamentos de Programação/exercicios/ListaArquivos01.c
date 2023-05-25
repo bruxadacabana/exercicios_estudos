@@ -1,7 +1,7 @@
 /*
     CÓDIGO DO PROFESSOR
 
-    
+
     FAETERJ-Rio
 	FPR - Manhã e Noite 
 	Data: 22/04/2023 (aula extra)
@@ -37,13 +37,14 @@ void main ()
 	//testando o retorno da função
 	switch (quant)
 	{
-		case -1: printf ("\nErro na abertura do arquivo!");
-		         break;
-		         
-		case 0:  printf ("\nArquivo vazio!");
-		         break;
-		         
-		default: printf ("\nO arquivo %s contem %d caracteres.", nome, quant);
+		case -1:   
+            printf ("\nErro na abertura do arquivo!");
+		    break;  
+		case 0:  
+            printf ("\nArquivo vazio!");
+		    break;     
+		default: 
+            printf ("\nO arquivo %s contem %d caracteres.", nome, quant);
 	}	
 }
 
