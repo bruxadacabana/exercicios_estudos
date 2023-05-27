@@ -1,15 +1,16 @@
 package animais;
 
 // criando a classe Cachorro
-public class Cachorro {
+public class Cachorro extends Animal {
 	
 // características/ATRIBUTOS
-	private String nome;
+	static int numeroDeCachorros;  // variável estática para contar a quantidade de cachorros (objetos) criados com essa classe
+	/*private String nome;
 	private String cor;
 	private int altura;
 	private double peso;
+	private String estadoDeEspirito;*/
 	private int tamanhoRabo;
-	private String estadoDeEspirito;
 	
 	
 	
@@ -50,8 +51,13 @@ public class Cachorro {
 	public void setTamanhoRabo (int tamanhoRabo) {
 		this.tamanhoRabo = tamanhoRabo;
 	}
+	
 	public String getEstadoDeEspirito() {
 		return this.estadoDeEspirito;   // esse método está acessando a variável 'estadoDeEspirito' e passando para quem chamou 
+	}
+	
+	public static int getNumeroDeCachorros() {
+		return numeroDeCachorros;
 	}
 	
 	
@@ -65,29 +71,23 @@ public class Cachorro {
 		this.altura = altura;
 		this.peso = peso;
 		this.tamanhoRabo = tamanhoRabo;
+		
+		numeroDeCachorros++;  //toda vez que alguém usar o construtor, o contador (variável estática int) somará um
 	}
 	
 	
 //ações/MÉTODOS
-	public void comer() {}     //exemplo de método que não fa nada
+	/*public void comer() {}     //exemplo de método que não fa nada
 	
-	public void latir() {
+	public void soar() {
 		System.out.println("AU AU");     //exemplo de método que apenas printa algo na tela, sem receber nem enviar nada
 	}
 	
 	public String pegar() {
 		return "Bolinha";      //exemplo de método que não recebe nada, mas retorna um valor
-	}
+	}*/
 	
 	public String interagir(String acao) {
-		/*if (acao.equals("carinho")) {
-			this.estadoDeEspirito = "feliz";
-		} else if(acao.equals("gritar")) {
-			this.estadoDeEspirito = "bravo";          //exemplo de método que recebe algum valor e retorna outro
-		} else {
-			this.estadoDeEspirito = "neutro";
-		}*/
-		
 		
 		switch (acao) {
 			case "carinho":
@@ -107,6 +107,19 @@ public class Cachorro {
 		}
 		
 		return this.estadoDeEspirito;
+	}
+	
+	// definindo como sera exibido o método "toString". Geralmente usado para identificar objetos diferentes, então é comumente usado em documentos ou algo que seja unico para aquele objeto
+	@Override
+	public String toString() {
+		return "Cachorro{" +
+				"nome='" + nome + '\'' +
+				'}';
+	}
+	
+	@Override
+	public void soar() {
+		System.out.println("AU AU");
 	}
 	
 }
