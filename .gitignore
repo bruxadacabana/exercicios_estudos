@@ -1,5 +1,7 @@
-.metadata
-.settings
+.metadata/
+.settings/
+.idea/
+cmake-build-debug/
 *.exe
 *.txt
 *.zip

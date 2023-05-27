@@ -8,17 +8,20 @@ void main (){
 
     printf("buscar (8) retorna %d\n", buscaBinariaRec(vet, 0, 14, 8));
     printf("buscar (25) retorna %d\n", buscaBinariaRec(vet, 0, 14, 25));
+    printf("buscar (40) retorna %d\n", buscaBinariaRec(vet, 0, 14, 40));
 }
 
 int buscaBinariaRec (int vetor [], int inicio, int fim, int numero){
     
-    int meio=0;
+    int meio = 2;
 
-    meio = (inicio + fim)/meio;
-    printf("comparando %d com %d\n", numero, vetor[meio]);
     // testa antes se ainda tem espaço no vetor
     if (inicio <= fim) {
-        if (numero == vetor[meio]){  // testa se numero está no meio
+
+        meio = (inicio + fim)/meio;
+        printf("comparando %d com %d\n", numero, vetor[meio]);
+
+        if (numero == vetor[meio]){  // testa se numero está no meio. Caso base 2
             return meio;
         } else if (numero < vetor[meio]) {  //testa se numero está a esquerda do meio (menor do que o meio do vetor)
             return buscaBinariaRec (vetor, inicio, meio-1, numero);
@@ -26,7 +29,7 @@ int buscaBinariaRec (int vetor [], int inicio, int fim, int numero){
             return buscaBinariaRec (vetor, meio + 1, fim, numero);
         }
     } else {
-        return -1;  // numero não está no vetor
+        return -1;  // numero não está no vetor, caso base 1
     }
 
 }
