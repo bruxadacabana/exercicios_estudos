@@ -19,11 +19,14 @@ typedef struct {
 
 void preencherDados (TPet pets[]);
 
-int gerarAviso(TPet pets, );
+int gerarAviso(TPet pets[], TData data);
+
+int compararDatas (TData data1, TData data2);
 
 void main() {
     TPet pets[Q];
     TData hoje;
+    int i;
 
     hoje.dia = 28;
     hoje.mes = 05;
@@ -31,10 +34,55 @@ void main() {
 
     preencherDados (pets);
 
+    i = gerarAviso(pets, hoje);
+
+    if (i == 0){
+        printf("Houve um erro na execucao!");
+    } else {
+        printf("Mensagens geradas com sucesso!");
+    }
+
+}
+
+int gerarAviso(TPet pets[], TData data){
+    FILE *arq;
+    int i = 0, j;
+
+    arq = fopen("mensagens.txt", "w");
+
+    if (!arq){
+        return 0;
+    } else {
+        for (i = 0; i < Q; i++){
+            j = compararDatas(data, pets[i].dataUVac);
+            if (j == 1){
+                fprintf(arq, "%s | Prezado %s, a vacina do pet %s venceu no dia %d/%d/%d. Podemos agendar a nova dose?\n", pets[i].email, pets[i].nome_tutor, pets[i].nome_pet, pets[i].dataUVac.dia, pets[i].dataUVac.mes, pets[i].dataUVac.ano);
+                i++;
+            }
+        }
+    }
+
+    fclose(arq);
+
+    return 1;
+
+}
+
+int compararDatas (TData data1, TData data2){
+    // "data1" se refere � data atual e "data2" � data da ultima vacina do pet
+    if (data1.ano == data2.ano){
+        return 0;
+    } else if ((data2.ano == (data1.ano-1)) && (data2.mes > data1.mes)){
+        return 0;
+    } else if ((data2.ano == (data1.ano - 1)) && (data2.mes == data1.mes) && (data2.dia > data1.dia)){
+        return 0;
+    } else {
+        return 1;
+    }
 }
 
 void preencherDados(TPet pets[]){
-    // CRIAÇÃO DOS REGISTROS
+    // CRIA��O DOS REGISTROS
     pets[0].cod_cadastro = 001;
     strcpy (pets[0].nome_pet, "Jack");
     strcpy(pets[0].nome_tutor, "Denise");
@@ -52,7 +100,7 @@ void preencherDados(TPet pets[]){
     pets[1].dataUVac.ano = 2023;
 
     pets[2].cod_cadastro = 003;
-    strcpy (pets[2].nome_pet, "Lully");
+    strcpy (pets[2].nome_pet, "Titico");
     strcpy(pets[2].nome_tutor, "Carise");
     strcpy(pets[2].email, "cma@mail.com");
     pets[2].dataUVac.dia = 2;
