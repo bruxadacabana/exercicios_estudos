@@ -57,7 +57,6 @@ int gerarAviso(TPet pets[], TData data){
             j = compararDatas(data, pets[i].dataUVac);
             if (j == 1){
                 fprintf(arq, "%s | Prezado %s, a vacina do pet %s venceu no dia %d/%d/%d. Podemos agendar a nova dose?\n", pets[i].email, pets[i].nome_tutor, pets[i].nome_pet, pets[i].dataUVac.dia, pets[i].dataUVac.mes, pets[i].dataUVac.ano);
-                i++;
             }
         }
     }
