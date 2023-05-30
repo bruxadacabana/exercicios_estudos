@@ -44,6 +44,6 @@ int quantCarac (char nome[], char letra) {
 		
 		fclose (arq);
 		
-		return cont;
+		return cont; 
 	}
 }
