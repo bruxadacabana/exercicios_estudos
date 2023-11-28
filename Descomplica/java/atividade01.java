@@ -7,8 +7,8 @@ class Atividade{
         double pot;
         String msg = "";
         // entrada
-        a = Integer.parseInt(JOption.showInputDialog("Digite um numero inteiro"));
-        b = Integer.parseInt(JOption.showInputDialog("Digite outro numero inteiro"));
+        a = Integer.parseInt(JOptionPane.showInputDialog("Digite um numero inteiro"));
+        b = Integer.parseInt.showInputDialog("Digite outro numero inteiro"));
         // calculos
         pot = Math.pow(a, b);
         quo = a/b;
