@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -13,6 +15,8 @@ public class Main {
         double price2 = 650.50;
         double measure = 53.234567;
 
+        Scanner sc = new Scanner(System.in);
+
         System.out.println("Produtos:");
         System.out.printf(product1 + ", o qual custa $%.2f%n",price1);
         System.out.printf(product2 + ", o qual custa $%.2f%n",price2);
@@ -27,5 +31,6 @@ public class Main {
         o f no printf significa formatado e serve para formatar
         o %.2f sifnifica duas casas de ponto flutuante
          */
+        sc.close();
     }
 }
