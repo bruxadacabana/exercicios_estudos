@@ -1,13 +1,8 @@
-h1 {
-    color: white;
+body {
+    background-color: #000;
+    color: #F6F6F6;
 }
 
-p {
-    color: white;
-}
-
-button {
-    background-color: ciano;
-    color: white;
-    border: none;
+strong{
+    color: #22D4FD;
 }
