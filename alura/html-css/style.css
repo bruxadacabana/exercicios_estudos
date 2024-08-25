@@ -56,6 +56,9 @@ body {
 }
 
 a{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
     width: 378px;
     text-align: center;
     border-radius: 8px;
@@ -67,4 +70,8 @@ a{
     color: white;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
+}
+
+a:hover{
+    background-color: #272727;
 }
