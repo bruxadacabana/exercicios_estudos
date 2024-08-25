@@ -1,6 +1,7 @@
 .metadata/
 .settings/
 .idea/
+.venv/
 cmake-build-debug/
 *.exe
 *.txt
