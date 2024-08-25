@@ -1,16 +1,20 @@
-# This is a sample Python script.
+def faturial (num):
+    '''
+    Função que calcula o fatorial de um numero
+    :param num: valor do qual é calculado o fatorial
+    :return: valor resultado do calculo
+    '''
+    fat = 1;
+    if num < 0:
+        print("É necessário um número natural para isso")
+    elif (num == 0):
+        return fat
+    else:
+        while (num > 1):
+            fat = fat * num
+            num = num - 1
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    return fat
+x = int(input("Digite um valor: "))
+print(f"{x}! = {faturial(x)}")
+help(faturial)
