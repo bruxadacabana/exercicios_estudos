@@ -34,7 +34,7 @@ function obterTextoBase(){
 
 function descrip(){
     let texto = converterParaArray();
-    for (let i = 0; i <= textoBase.length; i++){
+    for (let i = 0; i <= texto.length; i++){
         if (texto[i] == "a"){
             texto.splice(i+1,1)
         }
