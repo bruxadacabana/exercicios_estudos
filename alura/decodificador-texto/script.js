@@ -53,9 +53,9 @@ function descrip(){
     }
     exibirResultado(texto);
 }
-
+/*
 function copiarResultado(){
-    var copiado = document.getElementById("principal__texto-resposta__texto");
-    copiado.select();
-    navigator.clipboard.writeText(copiado.value);
-}
+    const copiado = document.getElementById('principal__texto-resposta__texto');
+    const objetivo = document.getElementById('texto-base');
+    objetivo.innerHTML = copiado.innerHTML;
+}*/
