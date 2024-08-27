@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <script src="./script.js"></script>
+    <link rel="stylesheet" href="./assets/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mensagem secreta!</title>
@@ -15,10 +16,12 @@
             </div>
             <div class="principal__texto-base__botoes">
                 <button onclick="obterTextoBase()">Criptografar</button>
-                <button>Descriptografar</button>
+                <button onclick="descrip()">Descriptografar</button>
             </div>
         </section>
-        <section class="principal__texto-resposta"></section>
+        <section class="principal__texto-resposta">
+            <div id="principal__texto-resposta__texto"></div>
+        </section>
     </main>
     <footer></footer>
 </body>
