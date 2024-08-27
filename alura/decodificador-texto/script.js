@@ -53,7 +53,9 @@ function descrip(){
     }
     exibirResultado(texto);
 }
+
 function copiarResultado(){
-    let copiado = document.getElementById("principal__texto-resposta__texto").innerHTML;
-    navigator.Cripboard.writeText(copiado);
+    var copiado = document.getElementById("principal__texto-resposta__texto");
+    copiado.select();
+    navigator.clipboard.writeText(copiado.value);
 }
