@@ -8,21 +8,31 @@
     <title>Mensagem secreta!</title>
 </head>
 <body>
-    <header></header>
+    <header>
+        <h1>Criptografe e Descriptografe suas mensagens aqui!</h1>
+    </header>
     <main class="principal">
         <section class="principal__texto-base">
             <div class="principal__texto-base__texto">
-                <input type="text" id="texto-base" name="texto-base">
+                <input type="text" id="texto-base" name="texto-base" placeholder="Digite seu texto aqui">
             </div>
+            <p class="principal__texto-base__aviso">
+                Apenas letras minúsculas e sem acento.
+            </p>
             <div class="principal__texto-base__botoes">
                 <button onclick="obterTextoBase()">Criptografar</button>
                 <button onclick="descrip()">Descriptografar</button>
+                <button onclick="copiarResultado()">Copiar resultado</button>
             </div>
         </section>
         <section class="principal__texto-resposta">
-            <div id="principal__texto-resposta__texto"></div>
+            <div id="principal__texto-resposta__texto">
+                Aqui será exibido o resultado.
+            </div>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <p>Feito por Jenifer (@a_bruxa_da_cabana) durante o desafio da Alura para o Oracle One</p>
+    </footer>
 </body>
 </html>
