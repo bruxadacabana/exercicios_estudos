@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author JenMA
- *
- */
-module helloworld {
-}
