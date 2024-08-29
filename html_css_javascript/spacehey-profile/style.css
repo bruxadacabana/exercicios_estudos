@@ -4,6 +4,11 @@
 (c) Layout created by 🩻 xXjellyfishl0vrXx 🪼 (https://layouts.spacehey.com/layout?id=88620)
 (c) Layout created by .𖥔 ݁ ˖📌𝐑𝐄𝐃 𝐏𝐋𝐀𝐒𝐓𝐈𝐂. !!₊˚⊹ (https://layouts.spacehey.com/layout?id=83898)
 (c) Layout created by wizard☆skye (https://layouts.spacehey.com/layout?id=25001)
+(c) Layout created by Saevus ★ (https://layouts.spacehey.com/layout?id=102214)
+(c) Layout created by ailana (https://layouts.spacehey.com/layout?id=104159)
+(c) Layout created by  ೀ ꒰ᵇʳᵉⁱᵍʰ꒱ ⸝⸝ ᵛⁱᶜᵏʸ'ˢ ʷⁱᶠᵉ  (https://layouts.spacehey.com/layout?id=106558)
+(c) Layout created by Laydamerfor (https://layouts.spacehey.com/layout?id=107184)
+(c) Layout created by Victoria (https://layouts.spacehey.com/layout?id=100446)
 */
 
 * {
@@ -46,6 +51,23 @@ body {
     letter-spacing:2px; 
     line-height: 15px;
     text-shadow: 1px 1px 1px red;
+}
+
+body:before {
+	content: " ";
+	height: 100vh;
+	width: 100vw;
+	display: block;
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+	z-index: 100;
+	background-image: url('https://24.media.tumblr.com/46550ebc2f0c7fe55d39b265a16a4ccc/tumblr_miqxfjGfSP1rvb164o1_500.gif');
+	background-size: cover;
+	background-repeat: no-repeat;
+    background-position:center;
+	animation: yourAnimation 5s ease 0s 1 normal forwards;
+	pointer-events: none;
 }
 
 table {
@@ -198,5 +220,23 @@ table.comments-table{
 .online {
     content: url("https://i.ibb.co/BTBNN62/gifmaker-me-2.gif");
 }
+
+#BloodyV {
+    background: url("https://64.media.tumblr.com/bd1c7c76589cf4b1154e9c24775f3e97/08b6024acb610772-33/s400x600/ec46984004365b494395f1b069126afd192d1132.gifv");
+    background-position: center;
+    background-repeat: repeat;
+    width: 600%;
+    height:24px;
+    min-width: 1720px;
+    overflow: hidden;
+    position: fixed;
+    top: -0.9px;
+    left: 0px;
+    z-index: 100;
+    pointer-events: none;
+    opacity: 1;
+}
+
+@keyframes yourAnimation { 0.0%{ opacity: 1;} 75%{ opacity: 1; } 100%{ opacity: 0;} } 
 
 @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
