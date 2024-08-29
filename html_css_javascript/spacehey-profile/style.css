@@ -1,0 +1,202 @@
+/*  CRÉDITOS
+(c) Layout created by Morgan Madewell  (https://layouts.spacehey.com/layout?id=1182)
+(c) Layout created by Mitch :P (https://layouts.spacehey.com/layout?id=94602)
+(c) Layout created by 🩻 xXjellyfishl0vrXx 🪼 (https://layouts.spacehey.com/layout?id=88620)
+(c) Layout created by .𖥔 ݁ ˖📌𝐑𝐄𝐃 𝐏𝐋𝐀𝐒𝐓𝐈𝐂. !!₊˚⊹ (https://layouts.spacehey.com/layout?id=83898)
+(c) Layout created by wizard☆skye (https://layouts.spacehey.com/layout?id=25001)
+*/
+
+* {
+    cursor: url(https://cursors1.totallyfreecursors.com/thumbnails/batani.gif), auto !important;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+:root{
+    /* [background color]: header on top */
+     --logo-blue:url();
+    
+    /* [background color]: table headers, main top menu, border color*/
+     --lighter-blue:url(https://www.udrop.com/file/8RzO/2332.gif);  
+    
+    /* [background color]: 'interests' table (left column) */
+    /* [background color]: 'interests' table (right column) */
+     --even-lighter-blue: rgb(000,0.5)!important;
+     --lightest-blue: url(https://www.udrop.com/file/8RzO/2332.gif);
+    
+    /* [font color]: 'blurbs' , 'friend space', 'friends comments' */
+    /* [background color]: 'blurbs' , 'friend space', 'friends comments' */
+     --dark-orange: #d8f3dc!important;
+    
+     --light-orange:url(https://64.media.tumblr.com/d03f540a722ea52d26552c15b88a7996/69a49665c6591bbd-e0/s400x600/bfdc779839ea435cac0e8e9f124fb90c6c46396e.gifv); 
+    background-position: center;
+    
+    /* [background color]: 'friend comments' right column */
+     --even-lighter-orange: url(https://i.pinimg.com/originals/0e/f4/c4/0ef4c4def2fc957c65cd2bfe6ef2f2ae.jpg);
+    
+}
+
+body { 
+    cursor: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a023d5b0-5495-4037-b50a-818837258cb1/daz0wjd-9a044e5d-5137-4055-8a11-7e35ed9d504a.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvYTAyM2Q1YjAtNTQ5NS00MDM3LWI1MGEtODE4ODM3MjU4Y2IxXC9kYXowd2pkLTlhMDQ0ZTVkLTUxMzctNDA1NS04YTExLTdlMzVlZDlkNTA0YS5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.Zcg_hEInNJW_LoEwj9nuGDX2xDPUFZWvKXTpJ-fa4_4'), auto; 
+    background: url(https://i.pinimg.com/originals/c8/11/6b/c8116ba4baa9be01523d58d3618dcff9.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    font-family: Courier New;
+    font-size: 22px;
+    letter-spacing:2px; 
+    line-height: 15px;
+    text-shadow: 1px 1px 1px red;
+}
+
+table {
+    border-spacing: 2px;
+    width: 100%;
+    /* sets background */
+    background-image: url(https://webstockreview.net/images/spider-clipart-animation-2.gif);
+    background-repeat: repeat;
+    background-size: 70%;
+}  
+
+.blog-preview {
+    border: 1px dotted red!important; 
+    background: rgba(190, 190, 190);
+    background-image: url(https://66.media.tumblr.com/9668045ac06027a9dc0c0a64698d3dea/tumblr_pn6zjpPfm61ttq8sg_540.png);
+    opacity: 0.5;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px rgba(190, 190, 190,);
+    height:155px!important;
+    background-position: bottom-right;
+    background-repeat: no-repeat;
+}
+
+.profile-info{
+    display:none !important;
+}
+
+.blurbs .heading{
+    display:none !important;
+}
+
+.general-about {
+  background-image: linear-gradient(60deg, ######, ######);
+  background-clip: text;
+  color: ######;
+  -webkit-background-clip: text;
+}
+
+.profile {
+    background-color: #000000;
+    color: #870202; 
+    /*your text color for most of the page - this is the complimentary color for the magenta that you chose. Feel free to change it*/
+    border-left: 1px  dashed grey;
+    border-right: 1px dashed grey;
+}
+
+/*these are your various headers, I have used yellow to show you which text is affected by this code. Feel free to change them to what you prefer. If you want individual headers to be different colors then you have to write each one in a separate piece of code.*/
+
+h3 , h4, h5, .url-info b {
+    color: #000;
+    font-family: 'Creepster', cursive;
+    text-shadow: 0 0 7px red;
+}
+
+/* This is the color of the links on your page. I have set them to green so you can see what they are. Feel free to change them to your preferred color*/
+
+a {
+    color: #e70303;
+    text-shadow: 0 0 9px red;
+    font-family: 'Creepster', cursive;
+    font-size: 17px
+    line-height: 8px;
+}
+
+/* color of the normal text on your page. I have set this to purple so that you know which text is affected. Feel free to change it to what you prefer*/
+
+p, h2 {
+    color: black;
+}
+
+/* color of friend's names in the comments, number of friends and your name. This I set to orange */ 
+
+.count, .friends{
+     color: #74c69d;
+}
+
+.online{
+    content:url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/25425fb2-bc94-4349-8d8a-6eabb4d6ccd2/dc06hh0-09e89e98-dd43-4879-ae1c-fd5e25272c40.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMjU0MjVmYjItYmM5NC00MzQ5LThkOGEtNmVhYmI0ZDZjY2QyXC9kYzA2aGgwLTA5ZTg5ZTk4LWRkNDMtNDg3OS1hZTFjLWZkNWUyNTI3MmM0MC5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.kVoBWBZkZSn4FKvVk5o4sVZR0D1Jodv2XFy-v2Ue7V4");
+
+}
+
+/*127- [background color]: footer area*/
+/*     [Font color]: text footer area  [added by me]*/
+/*     remove the margin top and bottom [added by me]*/
+footer{  
+    background-image:url(https://www.udrop.com/file/8RzO/2332.gif);
+    color: #ff99cc!important; /* * */
+    margin: 0px !important; /* * */
+}
+
+nav .links {
+    background: url();
+    padding: 3.5px 16px 5.5px 16px;
+}
+
+h1 {
+    font-size: 90px!important;
+    line-height: 80px;
+    font-family: 'Creepster', cursive;
+    font-weight:normal;
+    text-transform: uppercase;
+    letter-spacing: -1.5px;
+    color: #000;
+    text-align:center;
+    padding-bottom:0px;
+    padding-top:0px;
+    text-shadow: 0 0 7px red;
+    background: #000;
+    background-image:url("");
+    background-position: center;
+    background-size: 100%;
+}
+
+.mood{
+    text-transform: lowercase;
+    color:#ff99cc; 
+    letter-spacing: 2px; 
+    font-style: none;
+}
+
+.contact {
+    border-radius: 25px;
+    background-image: url(https://64.media.tumblr.com/79f00a4bd2d7a68350ee43da82b79fa3/0dd7899c42dc4fc9-53/s400x600/ded94750b1e04533229f3eb9562109f3df0a9f46.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+    line-height: 8px;
+    color: #000;
+    background-size: 50%;
+}
+
+.profile-pic {
+    border-radius: 00px;
+    overflow: hidden;
+    border:1px dashed grey;
+}
+
+table.comments-table{
+    display: block;
+    height: 400px!important;
+    overflow-y: scroll;
+}
+
+.general-about{
+  position: relative;
+  margin-top: 30px;
+}
+.online {
+    content: url("https://i.ibb.co/BTBNN62/gifmaker-me-2.gif");
+}
+
+@-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
