@@ -4,7 +4,7 @@ print("| tamanho | bife acebolado (BA) | filé de frango (FF) |")
 print("|    P    |      R$ 16,00       |      R$ 15,00       |")
 print("|    M    |      R$ 18,00       |      R$ 17,00       |")
 print("|    G    |      R$ 22,00       |      R$ 21,00       |")
-print("|-------------------------------------------|")
+print("|-----------------------------------------------------|")
 
 # variáveis de controle
 controle = "S"  # controla o loop de pedidos
