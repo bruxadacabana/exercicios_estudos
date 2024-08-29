@@ -1,11 +1,11 @@
 print("Bem-vindos a loja da Jenifer Angelo Medeiros!")
 
+# solicitando o valor do pedido e a quantidade de parcelas
 valorDoPedido = float(input("Digite o valor do pedido: "))
 quantidadeDeParcelas = int(input("Digite a quantidade de parcelas: "))
 
 if quantidadeDeParcelas <= 0:
-    # testando caso o usuário tenha digitado um valor menor do que zero
-    # para a quantidade de parcelas por engano
+    # testando caso o usuário tenha digitado um valor menor do que zero para a quantidade de parcelas por engano
     print("Quantidade de parcelas inválida, tente novamente")
 elif quantidadeDeParcelas < 4:
     # juros de 0% para pedidos parcelados em três vezes ou menos
