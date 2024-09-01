@@ -12,7 +12,7 @@ def cadastrar_funcionarios(id):
     lista_funcionarios.append(cad_funcionario)
 
 def consultar_funcionarios():
-
+    while
 
 
 print("Bem-vindos à empresa da Jenifer Angelo Medeiros")
