@@ -40,7 +40,14 @@ def num_camisetas():
     quant = 0
     desconto = 0
     while quant <= 0:  # loop até que uma quantidade válida seja inserida
-        quant = int(input("Digite a quantidade de camisetas desejada (quantidade máxima: 20.000): "))
+        try:
+            quant = int(input("Digite a quantidade de camisetas desejada (quantidade máxima: 20.000): "))
+        except ValueError:  # trata a entrada de um possível valor não numérico
+            print("Quantidade inválida, tente novamente.")
+            print("")
+            quant = 0
+            continue
+
         if quant <= 0: # se a quantidade digitada for 0 ou negativa, pergunta novamente a quantidade
             continue
         elif quant < 20:  # sem desconto para pedidos de até 19 camisetas
@@ -70,7 +77,15 @@ def frete():
     print("----------------------------------------------")
     codigo = -1
     while codigo < 0:  # loop até que um código válido seja inserido
-        codigo = int(input("Digite o código da opção de frete desejada (0/1/2): "))
+
+        try:
+            codigo = int(input("Digite o código da opção de frete desejada (0/1/2): "))
+        except ValueError:  # trata a entrada de um possível valor não numérico
+            print("Código inválido, tente novamente.")
+            print("")
+            codigo = -1
+            continue
+
         if codigo < 0:
             break
         elif codigo == 0:
