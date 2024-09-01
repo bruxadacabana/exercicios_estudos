@@ -12,7 +12,15 @@ def cadastrar_funcionarios(id):
     lista_funcionarios.append(cad_funcionario)
 
 def consultar_funcionarios():
-    while
+    controle = 1
+    while controle != 4:
+        print("---------Menu de consulta---------")
+        print("| 1 - Consultar todos            |")
+        print("| 2 - Consultar por ID           |")
+        print("| 3 - Consultar por setor        |")
+        print("| 4 - Retornar ao menu principal |")
+        print("|---------------------------------")
+        try controle = int(input(""))
 
 
 print("Bem-vindos à empresa da Jenifer Angelo Medeiros")
